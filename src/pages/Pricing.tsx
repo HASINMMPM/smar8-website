@@ -1,4 +1,3 @@
-import React from 'react'
 import Hero from '../components/pricing/Hero'
 import FAQ from '../components/pricing/FAQ'
 import Cta from '../components/commen/Cta'

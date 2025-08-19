@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Hero from '../components/about/Hero'
 import OurStory from '../components/about/OurStory'
 import Cta from '../components/commen/Cta'

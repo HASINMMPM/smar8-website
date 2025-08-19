@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaArrowLeft, FaPrint, FaEllipsisH, FaBars, FaPlus, FaSearch, FaChevronDown, FaFolder, FaCheck, FaTimes, FaArrowRight } from 'react-icons/fa';
+import { FaArrowLeft, FaPrint, FaEllipsisH, FaBars, FaPlus, FaSearch, FaChevronDown, FaFolder, FaCheck, FaArrowRight } from 'react-icons/fa';
 
 const Features: React.FC = () => {
   const [activeFeature, setActiveFeature] = useState(0);

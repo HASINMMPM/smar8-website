@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroSection from '../components/landingpage/HeroSection'
 import Features from '../components/landingpage/Features'
 import IntegrationsAndFeatures from '../components/landingpage/IntegrationsAndFeatures'

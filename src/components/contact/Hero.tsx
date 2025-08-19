@@ -1,6 +1,6 @@
 import React from 'react'; 
 import { FaTicket } from 'react-icons/fa6';
-import { FaDesktop, FaHome, FaCalendar, FaEnvelope } from 'react-icons/fa';
+import { FaDesktop, FaHome, FaEnvelope } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
     return (

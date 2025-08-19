@@ -77,9 +77,8 @@ const FAQ: React.FC = () => {
 
           {/* Right Column - FAQ Items */}
           <div className="space-y-0">
-            {faqData.map((item, index) => {
+            {faqData.map((item) => {
               const isOpen = openItems.includes(item.id);
-              const isLast = index === faqData.length - 1;
               
               return (
                 <div key={item.id} className="border-b border-gray-200 last:border-b-0">

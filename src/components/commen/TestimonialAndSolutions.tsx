@@ -127,7 +127,7 @@ const reviews = [
   
 
 const TestimonialAndSolutions: React.FC = () => {
-  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [_, setCurrentCardIndex] = useState(0);
   const [visibleReviews, setVisibleReviews] = useState(6);
 
   const nextCard = () => {
@@ -266,7 +266,7 @@ const TestimonialAndSolutions: React.FC = () => {
 
                  {/* Solution Cards */}
          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-           {solutionCards.map((card, index) => (
+           {solutionCards.map((card) => (
              <div
                key={card.id}
                className="group cursor-pointer perspective-1000 w-full h-80"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaMobile, FaHeadset, FaUser, FaCogs, FaCalendar, FaCreditCard, FaBuilding, FaUsers, FaChartLine, FaShieldAlt } from 'react-icons/fa';
+import { FaMobile, FaHeadset, FaUser, FaCogs, FaCalendar, FaCreditCard, FaBuilding } from 'react-icons/fa';
 
 // Integration partners data
 const integrationPartners = [

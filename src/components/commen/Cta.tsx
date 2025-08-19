@@ -1,5 +1,4 @@
 import { FaArrowAltCircleRight } from "react-icons/fa";
-import React from "react";
 const Cta = () => {
   return (
     <section id="contact" className=" pb-16 md:pb-24 text-white ">

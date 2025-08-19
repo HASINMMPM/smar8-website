@@ -1,9 +1,9 @@
 import { FaArrowAltCircleRight } from "react-icons/fa";
-
+import React from "react";
 const Cta = () => {
   return (
-    <section id="contact" className=" pb-16 md:pb-24 bg-gradient-to-r from-primary-600 to-primary-800">
-      <div className=" cta  py-16 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className=" pb-16 md:pb-24 text-white ">
+      <div className=" bg-teal-800  py-16 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 mb-10 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

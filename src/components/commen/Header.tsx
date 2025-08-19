@@ -1,4 +1,5 @@
-import logo from "../assets/logo.jpg"
+import logo from "../../assets/logo.jpg"
+import React from "react";
 const Header = () => {
   return (
     <nav className="bg-white shadow-sm">
@@ -18,25 +19,25 @@ const Header = () => {
             Home
           </a>
           <a
-            href="#about"
+            href="/#about"
             className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium"
           >
             About
           </a>
           <a
-            href="#features"
+            href="/#features"
             className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium"
           >
             Features
           </a>
           <a
-            href="#services"
+            href="/#services"
             className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium"
           >
             Services
           </a>
           <a
-            href="#contact"
+            href="/#contact"
             className="text-gray-500 hover:text-gray-700 px-3 py-2 text-sm font-medium"
           >
             Contact

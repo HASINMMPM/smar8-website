@@ -1,3 +1,4 @@
+import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
@@ -38,6 +39,11 @@ const Footer = () => {
               <li>
                 <a href="/career" className="text-gray-400 hover:text-white">
                   Careers
+                </a>
+              </li>
+              <li>
+                <a href="/why-smar8" className="text-gray-400 hover:text-white">
+                  Why Smar8?
                 </a>
               </li>
             </ul>

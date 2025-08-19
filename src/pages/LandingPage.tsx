@@ -1,23 +1,22 @@
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Features from '../components/Features'
-import Trust from '../components/Trust'
-import Service from '../components/Service'
-import Testimonal from '../components/Testimonal'
-import Cta from '../components/Cta'
+import React from 'react'
+import HeroSection from '../components/landingpage/HeroSection'
+import Features from '../components/landingpage/Features'
+import IntegrationsAndFeatures from '../components/landingpage/IntegrationsAndFeatures'
+import TestimonialAndSolutions from '../components/commen/TestimonialAndSolutions'
+import FAQ from '../components/landingpage/FAQ'
+import Cta from '../components/commen/Cta'
 
 const LandingPage = () => {
-    return (
-        <>
-            <Hero />
-            <About />
-            <Features />
-            <Trust />
-            <Service />
-            <Testimonal />
-            <Cta />
-        </>
-    )
+  return (
+   <>
+   <HeroSection />
+   <Features/>
+   <IntegrationsAndFeatures/>
+   <TestimonialAndSolutions/>
+   <FAQ/>
+   <Cta/>
+   </>
+  )
 }
 
 export default LandingPage

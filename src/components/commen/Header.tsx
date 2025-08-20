@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import logo from "../../assets/logo.jpg";
+import logo from "../../assets/logo.webp";
 
 interface FeatureItem {
     title: string;

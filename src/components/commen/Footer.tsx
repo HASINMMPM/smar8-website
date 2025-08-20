@@ -1,111 +1,302 @@
+import React from 'react';
+import logo from "../../assets/logo.webp";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          <div>
-            <span className="text-xl font-bold text-white mb-6">
-              Smar8 Solutions
-            </span>
+    <footer className="bg-teal-900 text-white border-t border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        {/* Desktop Layout */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-12 gap-8">
+            {/* Left Column - Logo and Description */}
+            <div className="col-span-4">
+              <div className="space-y-6">
+                {/* Logo */}
+                <div>
+                  <img
+                    src={logo}
+                    alt="Logo"
+                    className="w-32 h-auto [filter:brightness(0)_saturate(100%)_invert(93%)_sepia(12%)_saturate(711%)_hue-rotate(127deg)_brightness(104%)_contrast(98%)]"
+/>
 
-            <p className="text-gray-400 mt-4">
-              Migrant Housing & Workforce Platform
+                </div>
+
+                {/* Description and Social Icons */}
+                <div className="space-y-4">
+                  <p className="text-teal-100 text-sm leading-relaxed max-w-md">
+                    Empowering real estate investors with comprehensive property management solutions.
+                    Streamline your rental operations and maximize your returns.
+                  </p>
+
+                  {/* Social Media Icons */}
+                  <div className="flex space-x-4">
+                    <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                      </svg>
+                    </a>
+                    <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                      </svg>
+                    </a>
+                    <a href="#" className="text-teal-100 hover:text-white transition-colors">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column - Navigation Sections */}
+            <div className="col-span-8">
+              <div className="grid grid-cols-4 gap-8">
+                {/* Solutions */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Solutions
+                  </h3>
+                  <ul className="space-y-3">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Banking</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">How it works</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Rent Collection</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Accounting & Bookkeeping</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Tenant Screening</a></li>
+                  </ul>
+                </div>
+
+                {/* No Title Section */}
+                <div>
+                  <ul className="space-y-3 mt-8">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Pricing</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Our customers</a></li>
+                  </ul>
+                </div>
+
+                {/* Features */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Features
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Security Deposits</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Savings Accounts</a></li>
+                  </ul>
+                </div>
+
+                {/* Company */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Company
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">About Baselane</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Partner with us</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Refer a Real Estate Investor</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">News Coverage</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Careers</a></li>
+                  </ul>
+                </div>
+
+                {/* For Renters */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    For Renters
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Services</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Landlord Insurance</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Rental Property Loans</a></li>
+                  </ul>
+                </div>
+
+                {/* Free tools */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Free tools
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Rental Calculator</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Price Your Rentals</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Lease Agreements</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Investing Guides</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Rental Forms</a></li>
+                  </ul>
+                </div>
+
+                {/* Resources */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Resources
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Blog</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Demo</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Help Center</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Product Updates</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Webinars</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Security</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Legal</a></li>
+                  </ul>
+                </div>
+
+                {/* Services */}
+                <div>
+                  <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">
+                    Services
+                  </h3>
+                  <ul className="space-y-3 text-teal-100">
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Landlord Insurance</a></li>
+                    <li><a href="#" className="text-teal-100 hover:text-white text-sm transition-colors">Rental Property Loans</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="lg:hidden space-y-8">
+          {/* Logo */}
+          <div>
+            <img
+              src="/placeholder-logo.png"
+              alt="Company Logo"
+              className="h-8 w-auto"
+            />
+          </div>
+
+          {/* Footer Navigation - Stacked Vertically */}
+          <nav className="space-y-8">
+            {/* Solutions */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Solutions
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Banking</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">How it works</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Rent Collection</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Accounting & Bookkeeping</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Tenant Screening</a></li>
+              </ul>
+            </div>
+
+            {/* No Title Section */}
+            <div>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Pricing</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Our customers</a></li>
+              </ul>
+            </div>
+
+            {/* Features */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Features
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Security Deposits</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Savings Accounts</a></li>
+              </ul>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Company
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">About Baselane</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Partner with us</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Refer a Real Estate Investor</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">News Coverage</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Careers</a></li>
+              </ul>
+            </div>
+
+            {/* For Renters */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                For Renters
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Services</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Landlord Insurance</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Rental Property Loans</a></li>
+              </ul>
+            </div>
+
+            {/* Free tools */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Free tools
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Rental Calculator</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Price Your Rentals</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Lease Agreements</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Investing Guides</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Rental Forms</a></li>
+              </ul>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Resources
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Blog</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Demo</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Help Center</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Product Updates</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Webinars</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Security</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Legal</a></li>
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-4">
+                Services
+              </h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Landlord Insurance</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-gray-900 text-sm transition-colors">Rental Property Loans</a></li>
+              </ul>
+            </div>
+          </nav>
+
+          {/* Description and Social Icons - Bottom on Mobile */}
+          <div className="space-y-4 pt-4 border-t border-gray-200">
+            <p className="text-gray-600 text-sm leading-relaxed">
+              Empowering real estate investors with comprehensive property management solutions.
+              Streamline your rental operations and maximize your returns.
             </p>
+
+            {/* Social Media Icons */}
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-facebook-f" />
+              <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-twitter" />
+              <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
+                </svg>
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-instagram" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white">
-                <i className="fab fa-linkedin-in" />
+              <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
               </a>
             </div>
           </div>
-          {/* COMPANy */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/about-us" className="text-gray-400 hover:text-white">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="/career" className="text-gray-400 hover:text-white">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="/why-smar8" className="text-gray-400 hover:text-white">
-                  Why Smar8?
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* PRODUCT */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/mobile-app" className="text-gray-400 hover:text-white">
-                  Mobile App
-                </a>
-              </li>
-              <li>
-                <a href="/web-platform" className="text-gray-400 hover:text-white">
-                  Web Platform
-                </a>
-              </li>
-              <li>
-                <a href="/api" className="text-gray-400 hover:text-white">
-                  API
-                </a>
-              </li>
-              <li>
-                <a href="/pricing" className="text-gray-400 hover:text-white">
-                  Pricing
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* SUPPORT */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="/helpcenter" className="text-gray-400 hover:text-white">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="/contact-us" className="text-gray-400 hover:text-white">
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="/privacy-policy" className="text-gray-400 hover:text-white">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="/terms-of-service" className="text-gray-400 hover:text-white">
-                  Terms of Service
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {/* BOTTOm */}
-        <div className="border-t border-gray-800 pt-8">
-          <p className="text-gray-400 text-sm text-center">
-            © 2023 SecureFinance. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

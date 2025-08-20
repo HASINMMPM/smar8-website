@@ -11,14 +11,14 @@ const Hero: React.FC = () => {
           <div className="space-y-8">
             {/* Navigation/Breadcrumb */}
             <div className="flex items-center space-x-3 text-gray-600">
-              <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                <FaHome className="w-4 h-4 text-green-600" />
+              <div className="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center">
+                <FaHome className="w-4 h-4 text-secondary-600" />
               </div>
               <span className="text-sm font-medium">About Us</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-dark-700 leading-tight">
               Revolutionizing the Rental Experience
             </h1>
 
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
 
             {/* CTA Button */}
             <div className="pt-4">
-              <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105 shadow-lg">
+              <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105 shadow-lg">
                 Start your free trial
               </button>
             </div>
@@ -42,15 +42,15 @@ const Hero: React.FC = () => {
             {/* Trial Details */}
             <div className="space-y-3 pt-6">
               <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <FaCheck className="w-4 h-4 text-secondary-600 flex-shrink-0" />
                 <span className="text-sm text-gray-600">Free 14 day trial</span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <FaCheck className="w-4 h-4 text-secondary-600 flex-shrink-0" />
                 <span className="text-sm text-gray-600">Credit card required</span>
               </div>
               <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <FaCheck className="w-4 h-4 text-secondary-600 flex-shrink-0" />
                 <span className="text-sm text-gray-600">Cancel anytime</span>
               </div>
             </div>
@@ -67,7 +67,7 @@ const Hero: React.FC = () => {
             </div>
             
             {/* Optional: Add a subtle overlay or decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-green-100 rounded-full opacity-20"></div>
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary-100 rounded-full opacity-20"></div>
           </div>
         </div>
       </div>

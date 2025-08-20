@@ -16,7 +16,7 @@ const HeroSection: React.FC = () => {
             </div>
             
             {/* Main Title */}
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-900 leading-tight">
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl  font-bold text-primary-900 leading-tight">
               The all-in-one platform <span className="text-secondary-500">that scales with your portfolio</span>
             </h1>
             

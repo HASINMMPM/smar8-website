@@ -8,8 +8,8 @@ const LearnMore: React.FC = () => {
       icon: FaComment,
       title: "Why Smar8 Solutions",
       description: "Learn more about our all-in-one property management platform designed for landlords.",
-      bgColor: "bg-gray-50",
-      iconColor: "text-gray-700",
+      bgColor: "bg-tertiary-100",
+      iconColor: "text-dark-700",
       link: "/why-smar8"
     },
     {
@@ -17,8 +17,8 @@ const LearnMore: React.FC = () => {
       icon: FaUser,
       title: "Case Studies",
       description: "Discover how real landlords and property managers use Smar8 Solutions to succeed.",
-      bgColor: "bg-green-50",
-      iconColor: "text-gray-700",
+      bgColor: "bg-tertiary-200",
+      iconColor: "text-dark-700",
       link: "/case-studies"
     },
     {
@@ -26,19 +26,19 @@ const LearnMore: React.FC = () => {
       icon: FaBriefcase,
       title: "Affiliate Program",
       description: "Share Smar8 Solutions with others and earn rewards every time someone signs up.",
-      bgColor: "bg-gray-50",
-      iconColor: "text-gray-700",
+      bgColor: "bg-tertiary-100",
+      iconColor: "text-dark-700",
       link: "/affiliate-program"
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-tertiary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-700 mb-6">
             Learn More About Smar8 Solutions
           </h2>
         </div>
@@ -58,12 +58,12 @@ const LearnMore: React.FC = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">
+              <h3 className="text-xl font-bold text-dark-700 text-center mb-4">
                 {card.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-center mb-6 leading-relaxed">
+              <p className="text-dark-600 text-center mb-6 leading-relaxed">
                 {card.description}
               </p>
 
@@ -71,7 +71,7 @@ const LearnMore: React.FC = () => {
               <div className="text-left">
                 <a 
                   href={card.link}
-                  className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold transition-colors group"
+                  className="inline-flex items-center text-secondary-900 hover:text-secondary-500 font-semibold transition-colors group duration-300"
                 >
                   Read More 
                   <FaArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

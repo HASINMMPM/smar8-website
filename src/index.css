@@ -1,4 +1,14 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Catamaran:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --font-catamaran: 'Catamaran', sans-serif; /* heading */
+  --font-roboto: 'Roboto', sans-serif; /* body */
+  --font-alegreya: 'Alegreya SC', serif; /* sub-heading */
+
+}   
 
 @theme {
         /* Primary */
@@ -54,3 +64,28 @@
         --color-dark-950: #1a2123;
       }
       
+  
+  /* Apply global fonts */
+  body {
+    font-family: var(--font-roboto); /* Default body text */
+    line-height: 1.6;
+  }
+  
+  /* Headings (H1–H3) */
+  h1, h2, h3 {
+    font-family: var(--font-catamaran);
+    font-weight: 700;
+  }
+  
+  /* Subheadings (H4–H6) */
+  h4, h5, h6 {
+    font-family: var(--font-alegreya);
+    font-weight: 600;
+  }
+  
+  /* Paragraphs */
+  p {
+    font-family: var(--font-roboto);
+    font-weight: 400;
+  }
+  

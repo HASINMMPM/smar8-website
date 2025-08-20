@@ -91,11 +91,11 @@ const Footer: React.FC = () => {
                     Company
                   </h3>
                   <ul className="space-y-3 text-tertiary-100">
-                    <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">About Baselane</a></li>
+                    <li><a href="/about-us" className="text-tertiary-100 hover:text-white text-sm transition-colors">About Smar8</a></li>
                     <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">Partner with us</a></li>
                     <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">Refer a Real Estate Investor</a></li>
                     <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">News Coverage</a></li>
-                    <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">Careers</a></li>
+                    <li><a href="/careers" className="text-tertiary-100 hover:text-white text-sm transition-colors">Careers</a></li>
                   </ul>
                 </div>
 
@@ -208,7 +208,7 @@ const Footer: React.FC = () => {
                 Company
               </h3>
               <ul className="space-y-3">
-                <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">About Baselane</a></li>
+                <li><a href="/about-us" className="text-tertiary-100 hover:text-white text-sm transition-colors">About Smar8</a></li>
                 <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">Partner with us</a></li>
                 <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">Refer a Real Estate Investor</a></li>
                 <li><a href="#" className="text-tertiary-100 hover:text-white text-sm transition-colors">News Coverage</a></li>

@@ -55,7 +55,7 @@ const FAQ: React.FC = () => {
           
           {/* Left Column - FAQ Title */}
           <div className="flex items-start">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-bold text-dark-700 leading-tight">
               FAQs
             </h2>
           </div>
@@ -67,22 +67,22 @@ const FAQ: React.FC = () => {
         
               
               return (
-                <div key={item.id} className="border-b border-gray-200 last:border-b-0">
+                <div key={item.id} className="border-b border-dark-200 last:border-b-0 ">
                   <button
                     onClick={() => toggleItem(item.id)}
                     onKeyDown={(e) => handleKeyDown(e, item.id)}
-                    className="w-full py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:bg-gray-50"
+                    className="w-full px-2 py-6 text-left flex items-center justify-between hover:bg-dark-50 transition-colors duration-200 focus:outline-none focus:bg-dark-50"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${item.id}`}
                   >
-                    <span className="text-lg font-medium text-gray-900 pr-4">
+                    <span className="text-lg font-medium text-dark-700 pr-4">
                       {item.question}
                     </span>
                     <div className="flex-shrink-0">
                       {isOpen ? (
-                        <FaMinus className="w-5 h-5 text-gray-500" />
+                        <FaMinus className="w-5 h-5 text-dark-500" />
                       ) : (
-                        <FaPlus className="w-5 h-5 text-gray-500" />
+                        <FaPlus className="w-5 h-5 text-dark-500" />
                       )}
                     </div>
                   </button>
@@ -94,7 +94,7 @@ const FAQ: React.FC = () => {
                     }`}
                   >
                     <div className="pb-6 pr-8">
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-dark-600 leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

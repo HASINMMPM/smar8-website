@@ -190,7 +190,7 @@ const HeaderNew = () => {
                         {mainNavItems.map((item) => (
                             <div key={item.key} className="relative">
                                 <button
-                                    className="text-[#33475B] hover:text-[#1A202C] px-3 py-2 text-sm font-medium transition-colors duration-200"
+                                    className="text-dark-700 hover:text-dark-900 px-3 py-2 text-sm font-medium transition-colors duration-200"
                                     onMouseEnter={() => handleMouseEnter(item.key)}
                                 >
                                     {item.label}
@@ -201,16 +201,16 @@ const HeaderNew = () => {
 
                     {/* Desktop CTA Button */}
                     <div className="hidden lg:flex lg:items-center">
-                        <button className="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200">
-                            Sign In
-                        </button>
+                                              <button className="px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                          Sign In
+                      </button>
                     </div>
 
                     {/* Mobile Menu Button */}
                     <div className="flex items-center lg:hidden">
                         <button
                             type="button"
-                            className="inline-flex items-center justify-center p-2 rounded-md text-[#33475B] hover:text-[#1A202C] hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500 transition-all duration-200"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-dark-700 hover:text-dark-900 hover:bg-tertiary-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500 transition-all duration-200"
                             onClick={toggleMobileMenu}
                             aria-controls="mobile-menu"
                             aria-expanded={isMobileMenuOpen}
@@ -250,7 +250,7 @@ const HeaderNew = () => {
             {hoveredNavItem && (
                 <div
                     ref={dropdownRef}
-                    className={`absolute left-0 right-0 bg-white border-t border-gray-200 shadow-lg transform transition-all duration-300 ease-out ${isDropdownVisible
+                    className={`absolute left-0 right-0 bg-white border-t border-tertiary-200 shadow-lg transform transition-all duration-300 ease-out ${isDropdownVisible
                             ? 'translate-y-0 opacity-100'
                             : 'translate-y-[-20px] opacity-0'
                         }`}
@@ -263,51 +263,51 @@ const HeaderNew = () => {
                                 <div className="flex-1 grid grid-cols-5 gap-8">
                                     {Object.entries(navigationData).map(([category, items]) => (
                                         <div key={category} className="space-y-4">
-                                            <h3 className="text-[#33475B] font-bold text-sm uppercase tracking-wide">
-                                                {category}
-                                            </h3>
-                                            <div className="space-y-4">
-                                                {items.map((item, index) => (
-                                                    <div key={index} className="flex items-start space-x-3 group cursor-pointer">
-                                                        <span className="text-[#33475B] text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
-                                                            {item.icon}
-                                                        </span>
-                                                        <div className="flex-1">
-                                                            <p className="text-[#33475B] font-semibold text-sm group-hover:text-[#1A202C] transition-colors duration-200">
-                                                                {item.title}
-                                                            </p>
-                                                            <p className="text-[#6B7C8F] text-xs mt-1 leading-relaxed">
-                                                                {item.description}
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
+                                                                                      <h3 className="text-dark-700 font-bold text-sm uppercase tracking-wide">
+                                              {category}
+                                          </h3>
+                                          <div className="space-y-4">
+                                              {items.map((item, index) => (
+                                                  <div key={index} className="flex items-start space-x-3 group cursor-pointer">
+                                                      <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
+                                                          {item.icon}
+                                                      </span>
+                                                      <div className="flex-1">
+                                                          <p className="text-dark-700 font-semibold text-sm group-hover:text-dark-900 transition-colors duration-200">
+                                                              {item.title}
+                                                          </p>
+                                                          <p className="text-dark-400 text-xs mt-1 leading-relaxed">
+                                                              {item.description}
+                                                          </p>
+                                                      </div>
+                                                  </div>
+                                              ))}
+                                          </div>
                                         </div>
                                     ))}
                                 </div>
                             ) : (
                                 // Other navigation items with 3 columns
                                 <div className="flex-1 grid grid-cols-3 gap-8">
-                                    {mainNavItems.find(item => item.key === hoveredNavItem)?.data.map((item, index) => (
-                                        <div key={index} className="flex items-start space-x-3 group cursor-pointer">
-                                            <span className="text-[#33475B] text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
-                                                {item.icon}
-                                            </span>
-                                            <div className="flex-1">
-                                                <p className="text-[#33475B] font-semibold text-sm group-hover:text-[#1A202C] transition-colors duration-200">
-                                                    {item.title}
-                                                </p>
-                                                <p className="text-[#6B7C8F] text-xs mt-1 leading-relaxed">
-                                                    {item.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    ))}
+                                                                          {mainNavItems.find(item => item.key === hoveredNavItem)?.data.map((item, index) => (
+                                          <div key={index} className="flex items-start space-x-3 group cursor-pointer">
+                                              <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
+                                                  {item.icon}
+                                              </span>
+                                              <div className="flex-1">
+                                                  <p className="text-dark-700 font-semibold text-sm group-hover:text-dark-900 transition-colors duration-200">
+                                                      {item.title}
+                                                  </p>
+                                                  <p className="text-dark-400 text-xs mt-1 leading-relaxed">
+                                                      {item.description}
+                                                  </p>
+                                              </div>
+                                          </div>
+                                      ))}
                                 </div>
                             )}
-                            <button
-                                className="text-[#33475B] hover:text-[#1A202C] p-2 transition-colors duration-200"
+                                                      <button
+                              className="text-dark-700 hover:text-dark-900 p-2 transition-colors duration-200"
                                 onClick={() => {
                                     setIsDropdownVisible(false);
                                     setTimeout(() => setHoveredNavItem(null), 300);
@@ -337,14 +337,14 @@ const HeaderNew = () => {
                         {mobileView === 'main' && (
                             <div className="space-y-4">
                                 {mainNavItems.map((item) => (
-                                    <div key={item.key} className="border-b border-gray-200 last:border-b-0">
-                                        <button
-                                            onClick={() => openSubmenu(item)}
-                                            className="w-full text-left py-4 text-base font-medium text-[#33475B] hover:text-[#1A202C] flex items-center justify-between transition-colors duration-200"
-                                        >
-                                            {item.label}
-                                            <svg
-                                                className="h-5 w-5 text-green-600 transform transition-transform duration-200"
+                                                                      <div key={item.key} className="border-b border-tertiary-200 last:border-b-0">
+                                      <button
+                                          onClick={() => openSubmenu(item)}
+                                          className="w-full text-left py-4 text-base font-medium text-dark-700 hover:text-dark-900 flex items-center justify-between transition-colors duration-200"
+                                      >
+                                          {item.label}
+                                          <svg
+                                              className="h-5 w-5 text-primary-500 transform transition-transform duration-200"
                                                 fill="none"
                                                 viewBox="0 0 24 24"
                                                 stroke="currentColor"
@@ -357,9 +357,9 @@ const HeaderNew = () => {
 
                                 {/* Mobile CTA Button */}
                                 <div className="pt-4">
-                                    <button className="w-full px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors duration-200">
-                                        Sign In
-                                    </button>
+                                                                      <button className="w-full px-4 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200">
+                                      Sign In
+                                  </button>
                                 </div>
                             </div>
                         )}
@@ -368,17 +368,17 @@ const HeaderNew = () => {
                         {mobileView === 'submenu' && activeSubmenu && (
                             <div className="space-y-4">
                                 {/* Submenu Header with Back Navigation */}
-                                <div className="flex items-center justify-between pb-4 border-b border-gray-200">
-                                    <button
-                                        onClick={goBackToMain}
-                                        className="flex items-center text-[#33475B] hover:text-[#1A202C] transition-colors duration-200"
+                                                              <div className="flex items-center justify-between pb-4 border-b border-tertiary-200">
+                                  <button
+                                      onClick={goBackToMain}
+                                      className="flex items-center text-dark-700 hover:text-dark-900 transition-colors duration-200"
                                     >
                                         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                         </svg>
                                         Back
                                     </button>
-                                    <h2 className="text-lg font-semibold text-[#33475B]">{activeSubmenu.label}</h2>
+                                    <h2 className="text-lg font-semibold text-dark-700">{activeSubmenu.label}</h2>
                                     <div className="w-12"></div> {/* Spacer for centering */}
                                 </div>
 
@@ -388,45 +388,45 @@ const HeaderNew = () => {
                                         // Features submenu with categories
                                         Object.entries(navigationData).map(([category, items]) => (
                                             <div key={category} className="space-y-3">
-                                                <h4 className="text-sm font-semibold text-[#33475B] uppercase tracking-wide">
-                                                    {category}
-                                                </h4>
-                                                <div className="space-y-3">
-                                                    {items.map((subItem, index) => (
-                                                        <div key={index} className="flex items-start space-x-3 pl-4">
-                                                            <span className="text-[#33475B] text-base mt-0.5">
-                                                                {subItem.icon}
-                                                            </span>
-                                                            <div className="flex-1">
-                                                                <p className="text-sm font-medium text-[#33475B]">
-                                                                    {subItem.title}
-                                                                </p>
-                                                                <p className="text-xs text-[#6B7C8F] mt-1 leading-relaxed">
-                                                                    {subItem.description}
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    ))}
-                                                </div>
+                                                                                              <h4 className="text-sm font-semibold text-dark-700 uppercase tracking-wide">
+                                                  {category}
+                                              </h4>
+                                              <div className="space-y-3">
+                                                  {items.map((subItem, index) => (
+                                                      <div key={index} className="flex items-start space-x-3 pl-4">
+                                                          <span className="text-dark-700 text-base mt-0.5">
+                                                              {subItem.icon}
+                                                          </span>
+                                                          <div className="flex-1">
+                                                              <p className="text-sm font-medium text-dark-700">
+                                                                  {subItem.title}
+                                                              </p>
+                                                              <p className="text-xs text-dark-400 mt-1 leading-relaxed">
+                                                                  {subItem.description}
+                                                              </p>
+                                                          </div>
+                                                      </div>
+                                                  ))}
+                                              </div>
                                             </div>
                                         ))
                                     ) : (
                                         // Other navigation items submenu
-                                        activeSubmenu.data.map((subItem, index) => (
-                                            <div key={index} className="flex items-start space-x-3 pl-4">
-                                                <span className="text-[#33475B] text-base mt-0.5">
-                                                    {subItem.icon}
-                                                </span>
-                                                <div className="flex-1">
-                                                    <p className="text-sm font-medium text-[#33475B]">
-                                                        {subItem.title}
-                                                    </p>
-                                                    <p className="text-xs text-[#6B7C8F] mt-1 leading-relaxed">
-                                                        {subItem.description}
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        ))
+                                                                              activeSubmenu.data.map((subItem, index) => (
+                                          <div key={index} className="flex items-start space-x-3 pl-4">
+                                              <span className="text-dark-700 text-base mt-0.5">
+                                                  {subItem.icon}
+                                              </span>
+                                              <div className="flex-1">
+                                                  <p className="text-sm font-medium text-dark-700">
+                                                      {subItem.title}
+                                                  </p>
+                                                  <p className="text-xs text-dark-400 mt-1 leading-relaxed">
+                                                      {subItem.description}
+                                                  </p>
+                                              </div>
+                                          </div>
+                                      ))
                                     )}
                                 </div>
                             </div>

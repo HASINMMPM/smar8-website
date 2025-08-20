@@ -2,17 +2,17 @@ import { FaArrowAltCircleRight } from "react-icons/fa";
 const Cta = () => {
   return (
     <section id="contact" className=" pb-16 md:pb-24 text-white ">
-      <div className=" bg-teal-800  py-16 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className=" bg-dark-800  py-16 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-2/3 mb-10 md:mb-0">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Join 38 Lakh Workers Going Digital Today
             </h2>
-            <p className="text-lg text-primary-100 mb-8 max-w-2xl">
+            <p className="text-lg text-tertiary-100 mb-8 max-w-2xl">
               Join thousands of satisfied users who have transformed their
               financial management with our secure and flexible platform.
             </p>
-            <button className="flex items-center gap-2 px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-green-600 hover:bg-green-700 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-105">
+            <button className="flex items-center gap-2 px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary-500 hover:bg-primary-600 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-105">
               Get Started
               <span className="text-2xl">
                 <FaArrowAltCircleRight />

@@ -145,7 +145,7 @@ const TestimonialAndSolutions: React.FC = () => {
   const hasMoreReviews = visibleReviews < reviews.length;
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-secondary-50 rounded-t-3xl">
              {/* Customer Testimonial Section */}
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
          
@@ -153,9 +153,9 @@ const TestimonialAndSolutions: React.FC = () => {
             {reviews.slice(0, visibleReviews).map((testimonial, index) => (
               <div
                 key={index}
-                className={`rounded-lg shadow-md p-6 h-80 flex text-green-900 flex-col ${
+                className={`rounded-lg shadow-md p-6 h-80 flex text-dark-700 flex-col ${
                   index % 2 === 1
-                    ? 'bg-green-100 '   
+                    ? 'bg-secondary-100 '   
                     : 'bg-white '  
                 }`}
               >
@@ -179,7 +179,7 @@ const TestimonialAndSolutions: React.FC = () => {
                     <span className="font-bold text-lg">{testimonial.name}</span>
                     <div className="flex space-x-1">
                       {[...Array(testimonial.stars)].map((_, i) => (
-                        <FaStar key={i} className="w-4 h-4 text-yellow-400" />
+                        <FaStar key={i} className="w-4 h-4 text-secondary-500" />
                       ))}
                     </div>
                   </div>
@@ -202,7 +202,7 @@ const TestimonialAndSolutions: React.FC = () => {
            <div className="text-center mt-16">
              <button 
                onClick={loadMoreReviews}
-               className="px-8 py-3 border border-green-600 text-base font-medium rounded-md text-green-600 bg-white hover:bg-green-50 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+               className="px-8 py-3 border border-secondary-600 text-base font-medium rounded-md text-secondary-600 bg-white hover:bg-secondary-50 md:py-4 md:text-lg md:px-10 transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-secondary-500 focus:ring-offset-2"
                aria-label={`Load ${Math.min(6, reviews.length - visibleReviews)} more reviews`}
              >
                View More Reviews
@@ -219,10 +219,10 @@ const TestimonialAndSolutions: React.FC = () => {
               key={index}
               className="flex items-center justify-center w-20 h-12 lg:w-24 lg:h-16"
             >
-              <div className="text-gray-400 text-xs lg:text-sm font-semibold text-center opacity-60 hover:opacity-80 transition-opacity duration-300">
+              <div className="text-dark-400 text-xs lg:text-sm font-semibold text-center opacity-60 hover:opacity-80 transition-opacity duration-300">
                 {mention.hasCheckmark && (
                   <div className="flex flex-col items-center">
-                    <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mb-1">
+                    <div className="w-4 h-4 bg-secondary-500 rounded-full flex items-center justify-center mb-1">
                       <FaStar className="w-2 h-2 text-white" />
                     </div>
                     <span>{mention.logo}</span>
@@ -241,7 +241,7 @@ const TestimonialAndSolutions: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
         {/* Section Header with Navigation */}
         <div className="flex items-center justify-between mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+                      <h2 className="text-3xl lg:text-4xl font-bold text-dark-900">
             A solution that scales with your needs
           </h2>
           
@@ -249,17 +249,17 @@ const TestimonialAndSolutions: React.FC = () => {
           <div className="flex gap-2">
             <button
               onClick={prevCard}
-              className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors duration-200"
+              className="w-10 h-10 rounded-full bg-secondary-200 hover:bg-secondary-300 flex items-center justify-center transition-colors duration-200"
               aria-label="Previous card"
             >
-              <FaChevronLeft className="w-4 h-4 text-gray-600" />
+              <FaChevronLeft className="w-4 h-4 text-dark-600" />
             </button>
             <button
               onClick={nextCard}
-              className="w-10 h-10 rounded-full bg-gray-200 hover:bg-gray-300 flex items-center justify-center transition-colors duration-200"
+              className="w-10 h-10 rounded-full bg-secondary-200 hover:bg-secondary-300 flex items-center justify-center transition-colors duration-200"
               aria-label="Next card"
             >
-              <FaChevronRight className="w-4 h-4 text-gray-600" />
+              <FaChevronRight className="w-4 h-4 text-dark-600" />
             </button>
           </div>
         </div>
@@ -284,16 +284,16 @@ const TestimonialAndSolutions: React.FC = () => {
                      </div>
                      
                      <div className="text-center">
-                       <div className="text-sm font-semibold text-green-600 mb-2">
+                       <div className="text-sm font-semibold text-secondary-600 mb-2">
                          {card.role}
                        </div>
-                       <h3 className="text-lg font-bold text-gray-900 mb-2">
+                       <h3 className="text-lg font-bold text-dark-900 mb-2">
                          {card.title}
                        </h3>
                        {/* <p className="text-sm text-gray-600 mb-4">
                          {card.description}
                        </p> */}
-                       <div className="flex items-center justify-center text-green-600 font-semibold text-sm group-hover:text-green-700 transition-colors duration-200">
+                       <div className="flex items-center justify-center text-secondary-600 font-semibold text-sm group-hover:text-secondary-700 transition-colors duration-200">
                          Choose <FaArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-200" />
                        </div>
                      </div>
@@ -301,7 +301,7 @@ const TestimonialAndSolutions: React.FC = () => {
                  </div>
 
                  {/* Back of Card */}
-                 <div className="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-green-600 to-green-700 rounded-xl p-6 flex flex-col justify-center items-center text-white shadow-lg">
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-gradient-to-br from-secondary-600 to-secondary-700 rounded-xl p-6 flex flex-col justify-center items-center text-white shadow-lg">
                    <div className="text-center">
                      <h3 className="text-xl font-bold mb-3 text-center">
                        {card.title}

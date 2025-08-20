@@ -101,10 +101,10 @@ const Features: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-dark-700 mb-4">
             Powerful Features for Property Management
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-dark-400 max-w-3xl mx-auto">
             Everything you need to manage your properties efficiently, from tenant screening to financial reporting.
           </p>
         </div>
@@ -126,8 +126,8 @@ const Features: React.FC = () => {
                    }}
                    className={`group cursor-pointer transition-all duration-300 ${
                     isActive 
-                      ? 'bg-white shadow-lg rounded-xl p-6 border-l-4 border-green-500' 
-                      : 'bg-white/50 hover:bg-white/80 rounded-xl p-6 border-l-4 border-transparent hover:border-green-300'
+                      ? 'bg-white shadow-lg rounded-xl p-6 border-l-4 border-secondary-500' 
+                      : 'bg-white/50 hover:bg-white/80 rounded-xl p-6 border-l-4 border-transparent hover:border-secondary-300'
                   }`}
                   onClick={() => handleFeatureClick(index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
@@ -139,20 +139,20 @@ const Features: React.FC = () => {
                   <div className="flex items-start gap-4">
                     <div className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 ${
                       isActive 
-                        ? 'bg-green-100 text-green-600' 
-                        : 'bg-gray-100 text-gray-600 group-hover:bg-green-50 group-hover:text-green-600'
+                        ? 'bg-secondary-100 text-secondary-600' 
+                        : 'bg-gray-100 text-gray-600 group-hover:bg-secondary-50 group-hover:text-secondary-600'
                     }`}>
                       <IconComponent className="w-6 h-6" />
                     </div>
                     
                     <div className="flex-1 min-w-0">
                       <h3 className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
-                        isActive ? 'text-gray-900' : 'text-gray-800 group-hover:text-gray-900'
+                        isActive ? 'text-dark-700' : 'text-dark-800 group-hover:text-dark-900'
                       }`}>
                         {feature.title}
                       </h3>
                       <p className={`text-sm leading-relaxed transition-colors duration-300 ${
-                        isActive ? 'text-gray-700' : 'text-gray-600 group-hover:text-gray-700'
+                        isActive ? 'text-dark-700' : 'text-dark-600 group-hover:text-dark-700'
                       }`}>
                         {feature.description}
                       </p>
@@ -161,8 +161,8 @@ const Features: React.FC = () => {
                     {/* Active indicator */}
                     <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
                       isActive 
-                        ? 'bg-green-500 text-white scale-100' 
-                        : 'bg-gray-200 text-transparent scale-75 group-hover:bg-green-100 group-hover:text-green-500'
+                        ? 'bg-secondary-500 text-white scale-100' 
+                        : 'bg-gray-200 text-transparent scale-75 group-hover:bg-secondary-100 group-hover:text-secondary-500'
                     }`}>
                       <FaCheck className="w-3 h-3" />
                     </div>
@@ -207,7 +207,7 @@ const Features: React.FC = () => {
                </div>
               
               {/* Feature navigation dots */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {featuresData.map((_, index) => (
                   <button
                     key={index}
@@ -220,7 +220,7 @@ const Features: React.FC = () => {
                     aria-label={`Go to feature ${index + 1}`}
                   />
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

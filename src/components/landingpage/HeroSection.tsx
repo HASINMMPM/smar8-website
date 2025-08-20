@@ -11,17 +11,17 @@ const HeroSection: React.FC = () => {
           {/* Left Section - Text Content & CTA */}
           <div className="space-y-8">
             {/* Headline */}
-            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-green-100 text-green-700">
+            <div className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-primary-100 text-primary-700">
               Property Management Software
             </div>
             
             {/* Main Title */}
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
-              The all-in-one platform that scales with your portfolio
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-900 leading-tight">
+              The all-in-one platform <span className="text-secondary-500">that scales with your portfolio</span>
             </h1>
             
             {/* Description */}
-            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl">
+            <p className="text-lg lg:text-xl text-dark-600 leading-relaxed max-w-2xl">
               TenantCloud helps you simplify and grow your property management business. 
               Find everything you need to list properties, collect rent, and screen tenants—in one, easy place.
             </p>
@@ -31,25 +31,25 @@ const HeroSection: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email to start"
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="flex-1 px-4 py-3 border border-dark-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
               />
-              <button className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap">
+              <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap">
                 Get started
               </button>
             </div>
             
             {/* Feature Highlights */}
             <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <FaCheck className="text-green-500 text-xs" />
+              <div className="flex items-center gap-2 text-sm text-dark-600">
+                <FaCheck className="text-primary-500 text-xs" />
                 <span>Free 14 day trial</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <FaCheck className="text-green-500 text-xs" />
+              <div className="flex items-center gap-2 text-sm text-dark-600">
+                <FaCheck className="text-primary-500 text-xs" />
                 <span>Credit card required</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-600">
-                <FaCheck className="text-green-500 text-xs" />
+              <div className="flex items-center gap-2 text-sm text-dark-600">
+                <FaCheck className="text-primary-500 text-xs" />
                 <span>Cancel anytime</span>
               </div>
             </div>
@@ -57,55 +57,55 @@ const HeroSection: React.FC = () => {
           
           {/* Right Section - Video Player */}
           <div className="relative">
-            <div className="bg-green-800 rounded-xl p-6 shadow-2xl">
+            <div className="bg-primary-800 rounded-xl p-6 shadow-2xl">
               {/* Video Header */}
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <div className="w-4 h-4 bg-green-600 rounded-full"></div>
+                  <div className="w-4 h-4 bg-primary-600 rounded-full"></div>
                 </div>
                 <span className="text-white font-semibold">TenantCloud</span>
-                <span className="text-green-200 text-sm">Property Management Software</span>
+                <span className="text-primary-200 text-sm">Property Management Software</span>
               </div>
               
               {/* Video Content - Dashboard UI */}
               <div className="bg-white rounded-lg p-4 space-y-4">
                 {/* Calendar Widget */}
-                <div className="bg-gray-50 rounded-lg p-3">
-                  <div className="text-sm font-medium text-gray-900">Today, July 25</div>
-                  <div className="text-xs text-gray-600">You have 0 events today. View calendar</div>
+                <div className="bg-tertiary-50 rounded-lg p-3">
+                  <div className="text-sm font-medium text-dark-900">Today, July 25</div>
+                  <div className="text-xs text-dark-600">You have 0 events today. View calendar</div>
                 </div>
                 
                 {/* Recently Viewed Properties */}
                 <div className="space-y-2">
-                  <div className="text-sm font-medium text-gray-900">Recently viewed</div>
+                  <div className="text-sm font-medium text-dark-900">Recently viewed</div>
                   <div className="flex gap-2">
-                    <div className="w-12 h-8 bg-gray-200 rounded"></div>
-                    <div className="w-12 h-8 bg-gray-200 rounded"></div>
-                    <div className="w-12 h-8 bg-gray-200 rounded"></div>
+                    <div className="w-12 h-8 bg-tertiary-200 rounded"></div>
+                    <div className="w-12 h-8 bg-tertiary-200 rounded"></div>
+                    <div className="w-12 h-8 bg-tertiary-200 rounded"></div>
                   </div>
                 </div>
                 
                 {/* Chart */}
-                <div className="h-16 bg-gray-100 rounded-lg flex items-end justify-center gap-1 p-2">
-                  <div className="w-3 bg-green-500 rounded-t h-8"></div>
-                  <div className="w-3 bg-green-500 rounded-t h-12"></div>
-                  <div className="w-3 bg-green-500 rounded-t h-6"></div>
-                  <div className="w-3 bg-green-500 rounded-t h-10"></div>
-                  <div className="w-3 bg-green-500 rounded-t h-14"></div>
+                <div className="h-16 bg-tertiary-100 rounded-lg flex items-end justify-center gap-1 p-2">
+                  <div className="w-3 bg-primary-500 rounded-t h-8"></div>
+                  <div className="w-3 bg-primary-500 rounded-t h-12"></div>
+                  <div className="w-3 bg-primary-500 rounded-t h-6"></div>
+                  <div className="w-3 bg-primary-500 rounded-t h-10"></div>
+                  <div className="w-3 bg-primary-500 rounded-t h-14"></div>
                 </div>
                 
                 {/* Income Display */}
-                <div className="bg-green-50 rounded-lg p-3 text-center">
-                  <div className="text-xs text-gray-600">Income</div>
-                  <div className="text-lg font-bold text-green-700">$251,119</div>
+                <div className="bg-primary-50 rounded-lg p-3 text-center">
+                  <div className="text-xs text-dark-600">Income</div>
+                  <div className="text-lg font-bold text-primary-700">$251,119</div>
                 </div>
                 
                 {/* User Profile */}
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 bg-gray-300 rounded-full"></div>
+                  <div className="w-8 h-8 bg-tertiary-300 rounded-full"></div>
                   <div className="text-xs">
-                    <div className="font-medium text-gray-900">Property Manager</div>
-                    <div className="text-gray-600">Mice Walsh</div>
+                    <div className="font-medium text-dark-900">Property Manager</div>
+                    <div className="text-dark-600">Mice Walsh</div>
                   </div>
                 </div>
               </div>
@@ -114,24 +114,24 @@ const HeroSection: React.FC = () => {
               <div className="flex items-center justify-between mt-4 px-2">
                 <div className="flex items-center gap-3">
                   <button className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                    <FaPlay className="text-green-800 text-xs" />
+                    <FaPlay className="text-primary-800 text-xs" />
                   </button>
                   <span className="text-white text-xs">00:50</span>
-                  <div className="w-24 h-1 bg-gray-600 rounded-full">
+                  <div className="w-24 h-1 bg-dark-600 rounded-full">
                     <div className="w-12 h-1 bg-white rounded-full"></div>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button className="text-white hover:text-green-200">
+                  <button className="text-white hover:text-primary-200">
                     <FaVolumeUp className="text-xs" />
                   </button>
-                  <button className="text-white hover:text-green-200">
+                  <button className="text-white hover:text-primary-200">
                     <FaCog className="text-xs" />
                   </button>
-                  <button className="text-white hover:text-green-200">
+                  <button className="text-white hover:text-primary-200">
                     <FaClosedCaptioning className="text-xs" />
                   </button>
-                  <button className="text-white hover:text-green-200">
+                  <button className="text-white hover:text-primary-200">
                     <FaExpand className="text-xs" />
                   </button>
                 </div>
@@ -141,7 +141,7 @@ const HeroSection: React.FC = () => {
         </div>
         
         {/* Bottom Section - Customer Reviews */}
-        <div className="border-t border-gray-200 pt-12">
+        <div className="border-t border-tertiary-200 pt-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {/* Capterra */}
             <div className="text-center">
@@ -149,7 +149,7 @@ const HeroSection: React.FC = () => {
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-tertiary-300'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -157,7 +157,7 @@ const HeroSection: React.FC = () => {
                   </svg>
                 ))}
               </div>
-              <div className="text-sm font-medium text-gray-700">Capterra</div>
+              <div className="text-sm font-medium text-dark-700">Capterra</div>
             </div>
             
             {/* G2 Crowd */}
@@ -166,7 +166,7 @@ const HeroSection: React.FC = () => {
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-tertiary-300'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -174,7 +174,7 @@ const HeroSection: React.FC = () => {
                   </svg>
                 ))}
               </div>
-              <div className="text-sm font-medium text-gray-700">G2 Crowd</div>
+              <div className="text-sm font-medium text-dark-700">G2 Crowd</div>
             </div>
             
             {/* SoftwareAdvice */}
@@ -183,7 +183,7 @@ const HeroSection: React.FC = () => {
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-tertiary-300'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -191,7 +191,7 @@ const HeroSection: React.FC = () => {
                   </svg>
                 ))}
               </div>
-              <div className="text-sm font-medium text-gray-700">SoftwareAdvice</div>
+              <div className="text-sm font-medium text-dark-700">SoftwareAdvice</div>
             </div>
             
             {/* GetApp */}
@@ -200,7 +200,7 @@ const HeroSection: React.FC = () => {
                 {[...Array(5)].map((_, i) => (
                   <svg
                     key={i}
-                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-gray-300'}`}
+                    className={`w-4 h-4 ${i < 4 ? 'text-yellow-400' : 'text-tertiary-300'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -208,7 +208,7 @@ const HeroSection: React.FC = () => {
                   </svg>
                 ))}
               </div>
-              <div className="text-sm font-medium text-gray-700">GetApp</div>
+              <div className="text-sm font-medium text-dark-700">GetApp</div>
             </div>
           </div>
         </div>

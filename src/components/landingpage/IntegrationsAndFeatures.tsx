@@ -27,36 +27,36 @@ const featureCards = [
     title: "4.7 Star Mobile Apps",
     description: "Mobile-friendly support with separate landlord and tenant apps designed to help everyone manage their rentals with ease.",
     icon: FaMobile,
-    bgColor: "bg-green-100",
-    iconColor: "text-green-700",
-    iconBgColor: "bg-green-200"
+    bgColor: "bg-secondary-100",
+    iconColor: "text-secondary-700",
+    iconBgColor: "bg-secondary-200"
   },
   {
     id: 2,
     title: "World-Class Service",
     description: "Exceptional customer support from real people, including live chat, onboarding, and personalized one-on-one trainings.",
     icon: FaHeadset,
-    bgColor: "bg-purple-100",
-    iconColor: "text-purple-700",
-    iconBgColor: "bg-purple-200"
+    bgColor: "bg-secondary-100",
+    iconColor: "text-secondary-700",
+    iconBgColor: "bg-secondary-200"
   },
   {
     id: 3,
     title: "Owner Portal",
     description: "Keep owners involved with a separate owner portal, giving them access to the things they need without all the fluff.",
     icon: FaUser,
-    bgColor: "bg-blue-100",
-    iconColor: "text-blue-700",
-    iconBgColor: "bg-blue-200"
+    bgColor: "bg-secondary-100",
+    iconColor: "text-secondary-700",
+    iconBgColor: "bg-secondary-200"
   },
   {
     id: 4,
     title: "Team Management",
     description: "Get more done with team management tools. Add team members, grant permissions, access a team Calendar and task list, and more.",
     icon: FaCogs,
-    bgColor: "bg-teal-100",
-    iconColor: "text-teal-700",
-    iconBgColor: "bg-teal-200"
+    bgColor: "bg-secondary-100",
+    iconColor: "text-secondary-700",
+    iconBgColor: "bg-secondary-200"
   }
 ];
 
@@ -64,14 +64,14 @@ const IntegrationsAndFeatures: React.FC = () => {
   return (
     <section className="relative">
       {/* Integrations Section */}
-      <div className="bg-teal-800 rounded-t-3xl py-16 lg:py-20">
+      <div className="bg-secondary-800 rounded-t-3xl py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Integrated with the apps you love
             </h2>
-            <p className="text-lg text-teal-100 max-w-4xl mx-auto">
+            <p className="text-lg text-secondary-100 max-w-4xl mx-auto">
               Stay connected with 10+ third-party integrations including Google Calendar, Zapier, Stripe, RentRange, QuickBooks Online, Tenant Turner, and more.
             </p>
           </div>
@@ -131,7 +131,7 @@ const IntegrationsAndFeatures: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-dark-700 mb-4">
               Plus, everything else you'd expect on our highly rated platform
             </h2>
           </div>
@@ -152,10 +152,10 @@ const IntegrationsAndFeatures: React.FC = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-lg lg:text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg lg:text-xl font-bold text-dark-700 mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-sm lg:text-base text-gray-700 leading-relaxed">
+                  <p className="text-sm lg:text-base text-dark-700 leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

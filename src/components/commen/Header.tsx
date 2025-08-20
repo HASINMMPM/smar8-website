@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import logo from "../../assets/logo.webp";
-import { FaUser, FaFile, FaToolbox, FaChartLine, FaMoneyBill, FaBullhorn, FaStar, FaClock, FaMoneyCheckAlt, FaBlog, FaKey, FaQuestionCircle, FaMicrophone, FaDollarSign, FaComments } from 'react-icons/fa';
+import { FaUser, FaFile, FaToolbox, FaChartLine, FaMoneyBill, FaBullhorn, FaStar, FaClock, FaMoneyCheckAlt,  FaMicrophone, FaDollarSign, FaComments } from 'react-icons/fa';
 import { CgWebsite } from 'react-icons/cg';
 import { PiUsersFill } from 'react-icons/pi';
 import { MdPayment } from 'react-icons/md';
@@ -8,7 +8,6 @@ import { MdOutlineRepeatOn } from 'react-icons/md';
 import { HiDocumentReport } from 'react-icons/hi';
 import { IoCall } from 'react-icons/io5';
 import { FaHouse } from 'react-icons/fa6';
-import { FaVideo } from 'react-icons/fa6';
 import { RiCustomerService2Fill, RiToolsFill } from 'react-icons/ri';
 
 interface FeatureItem {
@@ -30,7 +29,7 @@ interface MainNavItem {
 }
 
 const Header = () => {
-    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+    const [_, setIsHeaderVisible] = useState(true);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [mobileView, setMobileView] = useState<'main' | 'submenu'>('main');
     const [activeSubmenu, setActiveSubmenu] = useState<MainNavItem | null>(null);

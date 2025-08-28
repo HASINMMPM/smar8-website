@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaCheck, FaStar, FaArrowRight } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
-  const [isYearly, setIsYearly] = useState(false);
 
   return (
     <section className="py-20 lg:py-32" style={{ background: 'linear-gradient(to bottom right, var(--color-primary-50), var(--color-secondary-50))' }}>
@@ -29,32 +28,7 @@ const Hero: React.FC = () => {
             Cancel anytime with our flexible pricing plans designed for landlords of all sizes.
           </p>
 
-          {/* Pricing Toggle */}
-          <div className="flex items-center justify-center space-x-4 mb-12">
-            <span className={`text-lg font-medium ${!isYearly ? 'text-gray-900' : 'text-gray-500'}`} style={{ color: !isYearly ? 'var(--color-dark-900)' : 'var(--color-dark-500)' }}>
-              Monthly
-            </span>
-            <button
-              onClick={() => setIsYearly(!isYearly)}
-              className="relative inline-flex h-12 w-24 items-center rounded-full transition-colors duration-200"
-              style={{ backgroundColor: isYearly ? 'var(--color-primary-600)' : 'var(--color-dark-300)' }}
-            >
-              <span
-                className="inline-block h-8 w-8 transform rounded-full bg-white shadow-lg transition-transform duration-200"
-                style={{ transform: isYearly ? 'translateX(48px)' : 'translateX(4px)' }}
-              />
-            </button>
-            <span className={`text-lg font-medium ${isYearly ? 'text-gray-900' : 'text-gray-500'}`} style={{ color: isYearly ? 'var(--color-dark-900)' : 'var(--color-dark-500)' }}>
-              Yearly
-            </span>
-            {isYearly && (
-              <span className="px-3 py-1 rounded-full text-sm font-medium" style={{ backgroundColor: 'var(--color-primary-100)', color: 'var(--color-primary-800)' }}>
-                Save 20%
-              </span>
-            )}
-          </div>
-
-          {/* Trust Indicators */}
+          {/* Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="flex items-center justify-center space-x-3">
               <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--color-primary-100)' }}>

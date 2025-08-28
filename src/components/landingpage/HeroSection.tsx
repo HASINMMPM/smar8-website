@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaCheck, FaPlay, FaVolumeUp, FaCog, FaClosedCaptioning, FaExpand } from 'react-icons/fa';
+import { FaPlay, FaVolumeUp, FaCog, FaClosedCaptioning, FaExpand } from 'react-icons/fa';
 
 const HeroSection: React.FC = () => {
   return (
@@ -36,22 +36,6 @@ const HeroSection: React.FC = () => {
               <button className="px-6 py-3 bg-primary-500 hover:bg-primary-600 text-white font-semibold rounded-lg transition-colors duration-200 whitespace-nowrap">
                 Get started
               </button>
-            </div>
-            
-            {/* Feature Highlights */}
-            <div className="space-y-2">
-              <div className="flex items-center gap-2 text-sm text-dark-600">
-                <FaCheck className="text-primary-500 text-xs" />
-                <span>Free 14 day trial</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-dark-600">
-                <FaCheck className="text-primary-500 text-xs" />
-                <span>Credit card required</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm text-dark-600">
-                <FaCheck className="text-primary-500 text-xs" />
-                <span>Cancel anytime</span>
-              </div>
             </div>
           </div>
           

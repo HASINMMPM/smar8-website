@@ -9,8 +9,9 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import TenentScreen from "./pages/TenentScreen";
-import RentelApplication from "./pages/RentelApplication";
+import TenentScreen from "./pages/header/TenentScreen";
+import RentelApplication from "./pages/header/RentelApplication";
+import OnlineLease from "./pages/header/OnlineLease";
 
 const App = () => {
   return (
@@ -51,6 +52,10 @@ const App = () => {
         <Route
           path="/features/rental-application"
           element={<RentelApplication />}
+        />
+        <Route
+          path="/features/online-leases"
+          element={<OnlineLease />}
         />
 
         {/* <Route

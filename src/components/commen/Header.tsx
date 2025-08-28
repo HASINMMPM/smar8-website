@@ -230,32 +230,32 @@ const Header = () => {
                 {hoveredNavItem && (
                     <div
                         ref={dropdownRef}
-                        className={`absolute left-0 right-0 bg-white border-t border-tertiary-200 shadow-lg transform transition-all duration-300 ease-out ${isDropdownVisible
+                        className={`absolute left-0 right-0 bg-white border-t border-secondary-200 shadow-xl transform transition-all duration-300 ease-out ${isDropdownVisible
                             ? 'translate-y-0 opacity-100'
                             : 'translate-y-[-20px] opacity-0'
                             }`}
                         style={{ width: '100vw', marginLeft: 'calc(-50vw + 50%)' }}
                     >
-                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                             <div className="flex justify-between items-start">
                                 {hoveredNavItem === 'features' ? (
-                                    <div className="flex-1 grid grid-cols-5 gap-8">
+                                    <div className="flex-1 grid grid-cols-4 gap-12">
                                         {Object.entries(navigationData).map(([category, items]) => (
-                                            <div key={category} className="space-y-4">
-                                                <h3 className="text-dark-700 font-bold text-sm uppercase tracking-wide">
+                                            <div key={category} className="space-y-6">
+                                                <h3 className="text-dark-700 font-bold text-sm uppercase tracking-wider text-secondary-600">
                                                     {category}
                                                 </h3>
-                                                <div className="space-y-4">
+                                                <div className="space-y-3">
                                                     {items.map((item, index) => (
-                                                        <a key={index} href={`/features/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center space-x-3 group cursor-pointer py-2 hover:bg-secondary-200 rounded-md transition-all duration-200">
-                                                            <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 p-2 transition-transform duration-200">
+                                                        <a key={index} href={`/features/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-4 group cursor-pointer py-3 px-3 hover:bg-secondary-50 rounded-lg transition-all duration-200 border border-transparent hover:border-secondary-200">
+                                                            <span className="text-secondary-500 text-xl mt-1 group-hover:scale-110 group-hover:text-secondary-600 p-2 bg-secondary-50 rounded-lg group-hover:bg-secondary-100 transition-all duration-200">
                                                                 {item.icon}
                                                             </span>
-                                                            <div className="flex-1">
+                                                            <div className="flex-1 min-w-0">
                                                                 <p className="text-dark-700 font-semibold text-sm group-hover:text-dark-900 transition-colors duration-200">
                                                                     {item.title}
                                                                 </p>
-                                                                <p className="text-dark-400 text-xs mt-1 leading-relaxed">
+                                                                <p className="text-dark-400 text-xs mt-2 leading-relaxed">
                                                                     {item.description}
                                                                 </p>
                                                             </div>
@@ -268,15 +268,15 @@ const Header = () => {
                                 ) : (
                                     <div className="flex-1 grid grid-cols-3 gap-8">
                                         {mainNavItems.find(item => item.key === hoveredNavItem)?.data.map((item, index) => (
-                                            <a key={index} href={`/${hoveredNavItem}/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center space-x-3 group cursor-pointer py-2 px-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
-                                                <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
+                                            <a key={index} href={`/${hoveredNavItem}/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-4 group cursor-pointer py-3 px-3 hover:bg-secondary-50 rounded-lg transition-all duration-200 border border-transparent hover:border-secondary-200">
+                                                <span className="text-secondary-900 text-xl mt-1 group-hover:scale-110 group-hover:text-secondary-600 p-2 bg-secondary-200 rounded-lg group-hover:bg-secondary-100 transition-all duration-200">
                                                     {item.icon}
                                                 </span>
-                                                <div className="flex-1">
+                                                <div className="flex-1 min-w-0">
                                                     <p className="text-dark-700 font-semibold text-sm group-hover:text-dark-900 transition-colors duration-200">
                                                         {item.title}
                                                     </p>
-                                                    <p className="text-dark-400 text-xs mt-1 leading-relaxed">
+                                                    <p className="text-dark-400 text-xs mt-2 leading-relaxed">
                                                         {item.description}
                                                     </p>
                                                 </div>
@@ -285,7 +285,7 @@ const Header = () => {
                                     </div>
                                 )}
                                 <button
-                                    className="text-dark-700 hover:text-dark-900 p-2 transition-colors duration-200"
+                                    className="text-dark-700 hover:text-secondary-600 p-2 transition-colors duration-200 hover:bg-secondary-50 rounded-lg"
                                     onClick={() => {
                                         setIsHeaderVisible(true);
                                     }}
@@ -463,13 +463,13 @@ const Header = () => {
                                         // Features submenu with categories
                                         Object.entries(navigationData).map(([category, items]) => (
                                             <div key={category} className="space-y-3">
-                                                <h4 className="text-sm font-semibold text-dark-700 uppercase tracking-wide">
+                                                <h4 className="text-sm font-semibold text-dark-700 uppercase tracking-wide text-secondary-600">
                                                     {category}
                                                 </h4>
                                                 <div className="space-y-3">
                                                     {items.map((subItem, index) => (
-                                                        <a key={index} href={`/features/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
-                                                            <span className="text-dark-700 text-base mt-0.5">
+                                                        <a key={index} href={`/features/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-3 hover:bg-secondary-50 rounded-lg transition-all duration-200 border border-transparent hover:border-secondary-200">
+                                                            <span className="text-secondary-500 text-base mt-0.5 p-2 bg-secondary-100 rounded-lg">
                                                                 {subItem.icon}
                                                             </span>
                                                             <div className="flex-1">
@@ -488,8 +488,8 @@ const Header = () => {
                                     ) : (
                                         // Other navigation items submenu
                                         activeSubmenu.data.map((subItem, index) => (
-                                            <a key={index} href={`/${activeSubmenu.key}/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
-                                                <span className="text-dark-700 text-base mt-0.5">
+                                            <a key={index} href={`/${activeSubmenu.key}/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-3 hover:bg-secondary-50 rounded-lg transition-all duration-200 border border-transparent hover:border-secondary-200">
+                                                <span className="text-secondary-500 text-base mt-0.5 p-2 bg-secondary-50 rounded-lg">
                                                     {subItem.icon}
                                                 </span>
                                                 <div className="flex-1">

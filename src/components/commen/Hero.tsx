@@ -13,7 +13,7 @@ interface HeroProps {
   onCtaClick?: () => void;
   
   // Disclaimers
-  disclaimers: string[];
+  disclaimers?: string[];
   
   // Visual content - now supports both image and custom content
   imageSrc?: string;
@@ -94,7 +94,7 @@ const Hero: React.FC<HeroProps> = ({
 
               {/* Small Print/Disclaimers */}
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-dark-500">
-                {disclaimers.map((disclaimer, index) => (
+                {disclaimers && disclaimers.map((disclaimer, index) => (
                   <div key={index} className="flex items-center gap-2">
                     <FaCheck className={`text-${getColorClass(primaryColor, 'primary-500')} flex-shrink-0`} />
                     <span>{disclaimer}</span>

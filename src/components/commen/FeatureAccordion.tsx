@@ -1,38 +1,40 @@
 import { useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import dummyImage from '../../assets/dummy.jpg';
 
-// Content data arrays
-const mainFeatures = [
-  {
-    id: 'occupancies',
-    title: "View Occupancies at a Glance",
-    description: "Access the Occupancy Tracker, a visual lease timeline that makes it easy to see who's living where, for how long, and what's coming up next.",
-    learnMoreUrl: "#"
-  },
-  {
-    id: 'leases',
-    title: "Send, Sign, and Store Leases Digitally",
-    description: "Speed up the signing process with secure eSignatures. Simply create and send your lease form, then TenantCloud will walk tenants through the final steps. Don't need an e-signature? No worries— just upload the lease, and you're good to go.",
-    learnMoreUrl: "#"
-  },
-  {
-    id: 'compliance',
-    title: "Stay Compliant with Attorney-Approved Forms",
-    description: "Our state-specific lease forms are reviewed by real estate attorneys— designed to help you stay compliant and protected while giving you complete flexibility.",
-    learnMoreUrl: "#"
-  }
-];
+interface Feature {
+  id: string;
+  title: string;
+  description: string;
+  learnMoreUrl: string;
+}
 
-const BackgroundChecks = () => {
-  const [activeFeature, setActiveFeature] = useState<string>('occupancies');
+interface FeatureAccordionProps {
+  title: string;
+  description: string;
+  features: Feature[];
+  imageSrc: string;
+  imageAlt: string;
+  defaultActiveFeature?: string;
+  className?: string;
+}
+
+const FeatureAccordion = ({
+  title,
+  description,
+  features,
+  imageSrc,
+  imageAlt,
+  defaultActiveFeature,
+  className = ""
+}: FeatureAccordionProps) => {
+  const [activeFeature, setActiveFeature] = useState<string>(defaultActiveFeature || features[0]?.id || '');
 
   const handleFeatureClick = (featureId: string) => {
     setActiveFeature(featureId);
   };
 
   return (
-    <section className="bg-white py-16 md:py-24">
+    <section className={`bg-white py-16 md:py-24 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -40,19 +42,17 @@ const BackgroundChecks = () => {
           <div className="space-y-8">
             {/* Main Title */}
             <h2 className="text-4xl md:text-5xl font-bold text-dark-900 leading-tight">
-              Streamline Your Rental Management
+              {title}
             </h2>
             
             {/* Main Description */}
             <p className="text-xl text-dark-600 leading-relaxed">
-              Manage your properties efficiently with our comprehensive suite of tools designed to simplify every aspect of rental property administration.
+              {description}
             </p>
-            
-           
             
             {/* Accordion Style Feature Section */}
             <div className="space-y-4">
-              {mainFeatures.map((feature) => (
+              {features.map((feature) => (
                 <div key={feature.id} className="border-t border-gray-200 pt-6">
                   <button
                     onClick={() => handleFeatureClick(feature.id)}
@@ -90,8 +90,8 @@ const BackgroundChecks = () => {
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
               <img 
-                src={dummyImage} 
-                alt="Rental Management Features" 
+                src={imageSrc} 
+                alt={imageAlt} 
                 className="w-full max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-lg shadow-lg"
               />
               
@@ -106,4 +106,4 @@ const BackgroundChecks = () => {
   );
 };
 
-export default BackgroundChecks;
+export default FeatureAccordion;

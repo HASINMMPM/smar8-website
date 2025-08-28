@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaCheck, FaPlay, FaVolumeMute, FaStar } from 'react-icons/fa';
+import { FaHome,FaPlay, FaVolumeMute, FaStar } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
   return (
@@ -32,22 +32,6 @@ const Hero: React.FC = () => {
               <button className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105 shadow-lg">
                 Start your free trial
               </button>
-            </div>
-
-            {/* Trial Benefits */}
-            <div className="space-y-3 pt-6">
-              <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-gray-800 flex-shrink-0" />
-                <span className="text-sm text-gray-600">Free 14 day trial</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-gray-800 flex-shrink-0" />
-                <span className="text-sm text-gray-600">Credit card required</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <FaCheck className="w-4 h-4 text-gray-800 flex-shrink-0" />
-                <span className="text-sm text-gray-600">Cancel anytime</span>
-              </div>
             </div>
           </div>
 

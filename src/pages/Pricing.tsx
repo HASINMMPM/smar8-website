@@ -7,7 +7,7 @@ const Pricing = () => {
         <div>
             <Hero />
             <FAQ />
-            <Cta />
+            <Cta heading="Ready to choose your plan?" />
         </div>
     )
 }

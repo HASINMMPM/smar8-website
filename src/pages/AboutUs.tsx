@@ -12,7 +12,7 @@ const AboutUs = () => {
             <OurStory />
             <Achievements />
             <LearnMore />
-            <Cta />
+            <Cta heading="List, manage, and maintain your properties at scale. Effortlessly." buttonText="Get Started" buttonUrl="/#" />
         </>
     )
 }

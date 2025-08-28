@@ -9,7 +9,7 @@ const WhyUs = () => {
       <Hero />
       <Features />
       <TestimonialAndSolutions />
-      <Cta />
+      <Cta heading="Ready to experience the difference?" />
     </>
   )
 }

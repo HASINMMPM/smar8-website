@@ -9,6 +9,8 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import TermsOfService from './pages/TermsOfService';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import TenentScreen from "./pages/TenentScreen";
+import RentelApplication from "./pages/RentelApplication";
 
 const App = () => {
   return (
@@ -38,11 +40,19 @@ const App = () => {
           element={<TermsOfService />}
         />
 
-<Route
-  path="/privacy-policy"
-  element={<PrivacyPolicy />}
-/>
-        
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+        <Route
+          path="/features/tenant-screening"
+          element={<TenentScreen />}
+        />
+        <Route
+          path="/features/rental-application"
+          element={<RentelApplication />}
+        />
+
         {/* <Route
           path="/terms-of-service"
           element={<TermsOfService />}

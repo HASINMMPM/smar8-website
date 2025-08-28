@@ -13,7 +13,7 @@ const LandingPage = () => {
    <IntegrationsAndFeatures/>
    <TestimonialAndSolutions/>
    <FAQ/>
-   <Cta/>
+   <Cta heading="Ready to get started?" />
    </>
   )
 }

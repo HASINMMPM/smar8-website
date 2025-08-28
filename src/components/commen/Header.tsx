@@ -247,8 +247,8 @@ const Header = () => {
                                                 </h3>
                                                 <div className="space-y-4">
                                                     {items.map((item, index) => (
-                                                        <div key={index} className="flex items-start space-x-3 group cursor-pointer">
-                                                            <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
+                                                        <a key={index} href={`/features/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center space-x-3 group cursor-pointer py-2 hover:bg-secondary-200 rounded-md transition-all duration-200">
+                                                            <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 p-2 transition-transform duration-200">
                                                                 {item.icon}
                                                             </span>
                                                             <div className="flex-1">
@@ -259,7 +259,7 @@ const Header = () => {
                                                                     {item.description}
                                                                 </p>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                     ))}
                                                 </div>
                                             </div>
@@ -268,7 +268,7 @@ const Header = () => {
                                 ) : (
                                     <div className="flex-1 grid grid-cols-3 gap-8">
                                         {mainNavItems.find(item => item.key === hoveredNavItem)?.data.map((item, index) => (
-                                            <div key={index} className="flex items-start space-x-3 group cursor-pointer">
+                                            <a key={index} href={`/${hoveredNavItem}/${item.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-center space-x-3 group cursor-pointer py-2 px-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
                                                 <span className="text-dark-700 text-lg mt-0.5 group-hover:scale-110 transition-transform duration-200">
                                                     {item.icon}
                                                 </span>
@@ -280,7 +280,7 @@ const Header = () => {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </a>
                                         ))}
                                     </div>
                                 )}
@@ -468,7 +468,7 @@ const Header = () => {
                                                 </h4>
                                                 <div className="space-y-3">
                                                     {items.map((subItem, index) => (
-                                                        <div key={index} className="flex items-start space-x-3 pl-4">
+                                                        <a key={index} href={`/features/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
                                                             <span className="text-dark-700 text-base mt-0.5">
                                                                 {subItem.icon}
                                                             </span>
@@ -480,7 +480,7 @@ const Header = () => {
                                                                     {subItem.description}
                                                                 </p>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                     ))}
                                                 </div>
                                             </div>
@@ -488,7 +488,7 @@ const Header = () => {
                                     ) : (
                                         // Other navigation items submenu
                                         activeSubmenu.data.map((subItem, index) => (
-                                            <div key={index} className="flex items-start space-x-3 pl-4">
+                                            <a key={index} href={`/${activeSubmenu.key}/${subItem.title.toLowerCase().replace(/\s+/g, '-')}`} className="flex items-start space-x-3 pl-4 py-2 hover:bg-secondary-100 rounded-md transition-all duration-200">
                                                 <span className="text-dark-700 text-base mt-0.5">
                                                     {subItem.icon}
                                                 </span>
@@ -500,7 +500,7 @@ const Header = () => {
                                                         {subItem.description}
                                                     </p>
                                                 </div>
-                                            </div>
+                                            </a>
                                         ))
                                     )}
                                 </div>

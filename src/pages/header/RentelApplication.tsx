@@ -4,6 +4,9 @@ import { FaPlus, FaSearch,  FaBuilding, FaShieldAlt, FaCreditCard, FaChartBar } 
 import Banner from '../../components/commen/Banner'
 import dummyImage from '../../assets/dummy.jpg'
 import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
 const mainFeatures = [
   {
@@ -47,6 +50,49 @@ const RentelApplication = () => {
     }
   ];
 
+  // How it works steps for rental applications
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Submit Application",
+      description: "Tenants complete comprehensive applications with all required documents and information through our secure platform."
+    },
+    {
+      step: 2,
+      title: "Background Screening",
+      description: "Automated background checks run instantly, checking credit, criminal records, eviction history, and identity verification."
+    },
+    {
+      step: 3,
+      title: "Review & Approve",
+      description: "Business owners review screening results, documents, and make informed decisions with our approval workflow."
+    },
+    {
+      step: 4,
+      title: "Tenant Onboarding",
+      description: "Approved tenants are automatically onboarded with lease generation and payment setup."
+    }
+  ];
+
+  // Business management features for FeatureGrid
+  const businessFeatures = [
+    {
+      icon: <FaBuilding className="text-primary-600 text-xl" />,
+      title: "Multi-Business Support",
+      description: "Manage rental applications across multiple businesses and locations from a single dashboard."
+    },
+    {
+      icon: <FaShieldAlt className="text-primary-600 text-xl" />,
+      title: "Security & Compliance",
+      description: "Ensure data security with encrypted storage and maintain compliance with industry regulations."
+    },
+    {
+      icon: <FaChartBar className="text-primary-600 text-xl" />,
+      title: "Analytics & Reporting",
+      description: "Get insights into application trends, screening results, and business performance metrics."
+    }
+  ];
+
   return (
     <div>
       <Hero
@@ -57,6 +103,7 @@ const RentelApplication = () => {
         headline="Streamline Your Rental Application Process"
         subheadline="As a Business Owner, efficiently manage rental applications, conduct comprehensive tenant screening, and streamline your leasing operations across multiple locations with Smar8 Business."
         ctaText="Start Managing Applications"
+        ctaUrl="/#"
         features={features}
         showSocialProof={false}
         primaryColor="primary"
@@ -80,51 +127,30 @@ const RentelApplication = () => {
       defaultActiveFeature="applications"
     />
 
-      {/* Additional Business Management Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Why Choose Smar8 Business for Applications?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform is designed specifically for Business Owners who need to manage multiple businesses and locations efficiently.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <FaBuilding className="text-primary-600 text-xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Multi-Business Support</h3>
-              <p className="text-gray-600">
-                Manage rental applications across multiple businesses and locations from a single dashboard.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <FaShieldAlt className="text-primary-600 text-xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Security & Compliance</h3>
-              <p className="text-gray-600">
-                Ensure data security with encrypted storage and maintain compliance with industry regulations.
-              </p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <FaChartBar className="text-primary-600 text-xl" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Analytics & Reporting</h3>
-              <p className="text-gray-600">
-                Get insights into application trends, screening results, and business performance metrics.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How Smar8 Business Application Process Works"
+        subtitle="Simple steps to streamline your rental application workflow from start to finish"
+        steps={howItWorksSteps}
+        backgroundColor="bg-white"
+      />
+
+      {/* Additional Business Management Section - Using reusable component */}
+      <FeatureGrid
+        title="Why Choose Smar8 Business for Applications?"
+        subtitle="Our platform is designed specifically for Business Owners who need to manage multiple businesses and locations efficiently."
+        features={businessFeatures}
+        backgroundColor="bg-gray-50"
+        columns={3}
+      />
+
+      {/* Call-to-Action Section */}
+      <Cta
+        heading="Ready to Transform Your Rental Application Process?"
+        description="Join thousands of business owners who trust Smar8 Business to manage their rental applications efficiently. Start streamlining your operations today and experience the difference."
+        buttonText="Start Free Trial"
+        buttonUrl="/#"
+      />
     </div>
   )
 }

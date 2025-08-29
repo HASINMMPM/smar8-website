@@ -11,6 +11,7 @@ interface HeroProps {
   subheadline: string;
   ctaText: string;
   onCtaClick?: () => void;
+  ctaUrl?: string;
   
   // Disclaimers
   disclaimers?: string[];
@@ -41,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({
   headline,
   subheadline,
   ctaText,
-  onCtaClick,
+  ctaUrl,
   disclaimers,
   imageSrc,
   imageAlt,
@@ -52,10 +53,13 @@ const Hero: React.FC<HeroProps> = ({
   textColor = 'text-dark-900',
   primaryColor = 'primary'
 }) => {
+
   const getColorClass = (colorType: string, defaultColor: string) => {
     if (colorType === 'primary') return defaultColor;
     return colorType;
   };
+
+  
 
   return (
     <div className={backgroundColor}>
@@ -85,12 +89,14 @@ const Hero: React.FC<HeroProps> = ({
               </p>
 
               {/* CTA Button */}
+              <a href={ctaUrl}>
               <button 
-                onClick={onCtaClick}
+                // onClick={handleCtaClick}
                 className={`bg-${getColorClass(primaryColor, 'primary-500')} hover:bg-${getColorClass(primaryColor, 'primary-600')} text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl`}
               >
                 {ctaText}
               </button>
+              </a>
 
               {/* Small Print/Disclaimers */}
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 text-sm text-dark-500">

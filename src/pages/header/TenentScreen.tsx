@@ -38,6 +38,7 @@ const TenentScreen = () => {
         headline="Professional Tenant Screening for Business Owners"
         subheadline="Conduct comprehensive background checks, credit screenings, and identity verification for your business tenants. Make informed decisions with our 99.9% accurate screening system."
         ctaText="Start Screening Tenants"
+        ctaUrl="/#"
         features={features}
         showSocialProof={false}
         primaryColor="primary"
@@ -104,7 +105,7 @@ const TenentScreen = () => {
         heading="Ready to streamline your tenant screening process?"
         description="Join Smar8 Business and take control of your tenant screening operations. Conduct comprehensive background checks, maintain compliance, and make informed decisions across all your businesses."
         buttonText="Start Screening Today"
-        buttonUrl="/contact"
+        buttonUrl="/#"
       />
     </div>
   )

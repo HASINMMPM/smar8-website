@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome } from 'react-icons/fa';
+import { FaBuilding, FaBriefcase, FaUsers, FaArrowRight } from 'react-icons/fa';
 
 const Hero: React.FC = () => {
   return (
@@ -10,48 +10,98 @@ const Hero: React.FC = () => {
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Navigation/Breadcrumb */}
-            <div className="flex items-center space-x-3 text-gray-600">
-              <div className="w-8 h-8 bg-secondary-100 rounded-lg flex items-center justify-center">
-                <FaHome className="w-4 h-4 text-secondary-600" />
+            <div className="flex items-center space-x-3" style={{ color: 'var(--color-dark-600)' }}>
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" style={{ backgroundColor: 'var(--color-secondary-100)' }}>
+                <FaBuilding className="w-4 h-4" style={{ color: 'var(--color-secondary-600)' }} />
               </div>
-              <span className="text-sm font-medium">About Us</span>
+              <span className="text-sm font-medium">About Smar8</span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-dark-700 leading-tight">
-              Revolutionizing the Rental Experience
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight" style={{ color: 'var(--color-dark-700)' }}>
+              Revolutionizing
+              <span style={{ color: 'var(--color-primary-600)' }}> Property Management</span>
             </h1>
 
             {/* Introductory Paragraph */}
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Smar8 Solutions was founded in 2025 with the goal of improving the rental process for landlords, property owners, and renters alike.
+            <p className="text-lg leading-relaxed" style={{ color: 'var(--color-dark-600)' }}>
+              Smar8 is India's most comprehensive property management platform, designed with a unique three-application architecture that serves different user roles while maintaining unified identity and seamless data flow.
             </p>
 
             {/* Descriptive Paragraph */}
-            <p className="text-lg text-gray-600 leading-relaxed">
-              We empower millions of people to grow their rental businesses with top-notch technology, outstanding support, and educational content. Smar8 Solutions takes the stress out of managing properties, so you can focus on growing your business and delivering an exceptional rental experience.
+            <p className="text-lg leading-relaxed" style={{ color: 'var(--color-dark-600)' }}>
+              From individual tenants to business owners managing multiple locations, to building owners overseeing entire properties—Smar8 provides the tools, security, and scalability needed to transform property management operations across India.
             </p>
+
+            {/* Key Features */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+              <div className="flex items-center space-x-2">
+                <FaUsers className="w-4 h-4" style={{ color: 'var(--color-primary-600)' }} />
+                <span className="text-sm font-medium" style={{ color: 'var(--color-dark-700)' }}>Unified Identity</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaBriefcase className="w-4 h-4" style={{ color: 'var(--color-secondary-600)' }} />
+                <span className="text-sm font-medium" style={{ color: 'var(--color-dark-700)' }}>Role-Based Access</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FaBuilding className="w-4 h-4" style={{ color: 'var(--color-tertiary-600)' }} />
+                <span className="text-sm font-medium" style={{ color: 'var(--color-dark-700)' }}>Multi-Tenant</span>
+              </div>
+            </div>
 
             {/* CTA Button */}
             <div className="pt-4">
-              <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105 shadow-lg">
-                Start your free trial
+              <button className="text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors transform hover:scale-105 shadow-lg flex items-center space-x-2" style={{ backgroundColor: 'var(--color-primary-600)' }}>
+                <span>Start your free trial</span>
+                <FaArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
 
-          {/* Right Column - Team Image */}
+          {/* Right Column - System Architecture Visualization */}
           <div className="relative">
-            <div className="rounded-lg overflow-hidden shadow-xl">
-              <img 
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Smar8 Solutions Team" 
-                className="w-full h-auto object-cover"
-              />
+            <div className="rounded-2xl overflow-hidden shadow-xl p-8" style={{ backgroundColor: 'var(--color-primary-50)' }}>
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--color-dark-900)' }}>
+                  Smar8 System Architecture
+                </h3>
+                <p className="text-sm" style={{ color: 'var(--color-dark-600)' }}>
+                  Three Applications, One Unified Platform
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                {/* Smar8 Connect */}
+                <div className="flex items-center space-x-3 p-3 rounded-lg" style={{ backgroundColor: 'var(--color-primary-100)' }}>
+                  <FaUsers className="w-6 h-6" style={{ color: 'var(--color-primary-600)' }} />
+                  <div>
+                    <div className="font-semibold" style={{ color: 'var(--color-primary-900)' }}>Smar8 Connect</div>
+                    <div className="text-xs" style={{ color: 'var(--color-primary-700)' }}>For Tenants & Staff</div>
+                  </div>
+                </div>
+                
+                {/* Smar8 Business */}
+                <div className="flex items-center space-x-3 p-3 rounded-lg" style={{ backgroundColor: 'var(--color-secondary-100)' }}>
+                  <FaBriefcase className="w-6 h-6" style={{ color: 'var(--color-secondary-600)' }} />
+                  <div>
+                    <div className="font-semibold" style={{ color: 'var(--color-secondary-900)' }}>Smar8 Business</div>
+                    <div className="text-xs" style={{ color: 'var(--color-secondary-700)' }}>For Business Owners</div>
+                  </div>
+                </div>
+                
+                {/* Smar8 Manage */}
+                <div className="flex items-center space-x-3 p-3 rounded-lg" style={{ backgroundColor: 'var(--color-tertiary-100)' }}>
+                  <FaBuilding className="w-6 h-6" style={{ color: 'var(--color-tertiary-600)' }} />
+                  <div>
+                    <div className="font-semibold" style={{ color: 'var(--color-tertiary-900)' }}>Smar8 Manage</div>
+                    <div className="text-xs" style={{ color: 'var(--color-tertiary-700)' }}>For Building Owners</div>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            {/* Optional: Add a subtle overlay or decorative element */}
-            <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary-100 rounded-full opacity-20"></div>
+            {/* Decorative element */}
+            <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full opacity-20" style={{ backgroundColor: 'var(--color-secondary-100)' }}></div>
           </div>
         </div>
       </div>

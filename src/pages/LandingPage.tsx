@@ -13,7 +13,12 @@ const LandingPage = () => {
    <IntegrationsAndFeatures/>
    <TestimonialAndSolutions/>
    <FAQ/>
-   <Cta heading="Ready to get started?" />
+   <Cta 
+     heading="Transform Your Property Management Today" 
+     description="Join thousands of property professionals who trust Smar8 to streamline operations, enhance security, and scale their business. Start your 14-day free trial with no credit card required."
+     buttonText="Quick Start"
+     buttonUrl="/#"
+   />
    </>
   )
 }

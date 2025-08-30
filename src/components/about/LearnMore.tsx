@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUsers, FaBriefcase, FaBuilding, FaArrowRight, FaShieldAlt, FaChartLine } from 'react-icons/fa';
+import { FaUsers, FaBriefcase, FaBuilding, FaShieldAlt, FaChartLine } from 'react-icons/fa';
 
 const LearnMore: React.FC = () => {
   const learnMoreCards = [

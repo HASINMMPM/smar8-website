@@ -6,7 +6,6 @@ const PricingCalculator: React.FC = () => {
   const [peopleCount, setPeopleCount] = useState(10);
   const [monthlyTransfers, setMonthlyTransfers] = useState(2);
   const [businessesCount, setBusinessesCount] = useState(1);
-  const [buildingsCount, setBuildingsCount] = useState(1);
 
   const calculateCosts = () => {
     let baseCost = 0;

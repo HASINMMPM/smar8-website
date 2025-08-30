@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBuilding, FaStar, FaClock, FaUsers, FaShieldAlt, FaGlobe, FaCheckCircle, FaChartLine } from 'react-icons/fa';
+import { FaBuilding, FaStar, FaClock, FaUsers, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 
 const Achievements: React.FC = () => {
   return (

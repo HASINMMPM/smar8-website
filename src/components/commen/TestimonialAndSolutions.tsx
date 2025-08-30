@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaStar, FaChevronLeft, FaChevronRight, FaArrowRight, FaQuoteRight } from 'react-icons/fa';
+import { FaStar, FaArrowRight, FaQuoteRight } from 'react-icons/fa';
 import './TestimonialAndSolutions.css';
 
 // Press mentions data
@@ -127,16 +127,9 @@ const reviews = [
   
 
 const TestimonialAndSolutions: React.FC = () => {
-  const [_, setCurrentCardIndex] = useState(0);
   const [visibleReviews, setVisibleReviews] = useState(6);
 
-  const nextCard = () => {
-    setCurrentCardIndex((prev) => (prev + 1) % solutionCards.length);
-  };
-
-  const prevCard = () => {
-    setCurrentCardIndex((prev) => (prev - 1 + solutionCards.length) % solutionCards.length);
-  };
+ 
 
   const loadMoreReviews = () => {
     setVisibleReviews((prev) => Math.min(prev + 6, reviews.length));
@@ -258,22 +251,7 @@ const TestimonialAndSolutions: React.FC = () => {
           </h2>
           
           {/* Navigation Arrows */}
-          <div className="flex gap-2">
-            <button
-              onClick={prevCard}
-              className="w-10 h-10 rounded-full bg-secondary-200 hover:bg-secondary-300 flex items-center justify-center transition-colors duration-200"
-              aria-label="Previous card"
-            >
-              <FaChevronLeft className="w-4 h-4 text-dark-600" />
-            </button>
-            <button
-              onClick={nextCard}
-              className="w-10 h-10 rounded-full bg-secondary-200 hover:bg-secondary-300 flex items-center justify-center transition-colors duration-200"
-              aria-label="Next card"
-            >
-              <FaChevronRight className="w-4 h-4 text-dark-600" />
-            </button>
-          </div>
+         
         </div>
 
                  {/* Solution Cards */}

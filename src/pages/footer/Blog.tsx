@@ -1,69 +1,177 @@
-import React from 'react';
-import PageHero from '../../components/commen/PageHero';
-import ContentSection from '../../components/commen/ContentSection';
+import Hero from '../../components/commen/Hero'
+import { FaNewspaper, FaChartLine, FaLightbulb, FaShieldAlt, FaDownload, FaEye, FaFilter } from 'react-icons/fa'
+import Banner from '../../components/commen/Banner'
+import dummyImage from '../../assets/dummy.jpg'
+import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
-const Blog: React.FC = () => {
+const Blog = () => {
+  // Features array for the Hero component
+  const features = [
+    {
+      icon: <FaNewspaper className="text-secondary-800 text-2xl" />,
+      title: "Expert insights and market analysis"
+    },
+    {
+      icon: <FaChartLine className="text-secondary-800 text-2xl" />,
+      title: "Investment strategies and tips"
+    },
+    {
+      icon: <FaLightbulb className="text-secondary-800 text-2xl" />,
+      title: "Property management best practices"
+    },
+    {
+      icon: <FaShieldAlt className="text-secondary-800 text-2xl" />,
+      title: "Legal compliance and regulations"
+    }
+  ];
+
+  // Blog features for FeatureAccordion
+  const blogFeatures = [
+    {
+      id: 'investment-strategies',
+      title: "Investment Strategies",
+      description: "Learn proven strategies for real estate investing, from analyzing markets to maximizing returns on your property investments.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'property-management',
+      title: "Property Management Tips",
+      description: "Discover best practices for managing rental properties, handling tenants, and maintaining profitable operations.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'market-trends',
+      title: "Market Trends & Analysis",
+      description: "Stay ahead of the curve with comprehensive market analysis, emerging trends, and investment opportunities.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'legal-compliance',
+      title: "Legal & Compliance",
+      description: "Navigate complex real estate regulations, understand tenant rights, and ensure compliance with local laws.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'financial-planning',
+      title: "Financial Planning",
+      description: "Master financial planning for real estate investments, including tax strategies and portfolio optimization.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'technology-tools',
+      title: "Technology & Tools",
+      description: "Explore the latest technology solutions and tools that can streamline your property management operations.",
+      learnMoreUrl: "#"
+    }
+  ];
+
+  // How it works steps
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Browse Articles",
+      description: "Explore our comprehensive library of articles covering all aspects of real estate investing and property management."
+    },
+    {
+      step: 2,
+      title: "Learn & Apply",
+      description: "Read expert insights, practical tips, and real-world examples that you can immediately apply to your investments."
+    },
+    {
+      step: 3,
+      title: "Stay Updated",
+      description: "Subscribe to our newsletter to receive the latest articles, market updates, and investment opportunities."
+    },
+    {
+      step: 4,
+      title: "Grow Your Portfolio",
+      description: "Use the knowledge gained from our blog to make informed decisions and grow your real estate portfolio successfully."
+    }
+  ];
+
+  // Key benefits features
+  const keyBenefits = [
+    {
+      icon: <FaEye className="text-primary-600 text-xl" />,
+      title: "Expert Insights",
+      description: "Access insights from industry experts and successful real estate investors with proven track records."
+    },
+    {
+      icon: <FaFilter className="text-primary-600 text-xl" />,
+      title: "Practical Knowledge",
+      description: "Learn actionable strategies and tips that you can immediately implement in your real estate business."
+    },
+    {
+      icon: <FaDownload className="text-primary-600 text-xl" />,
+      title: "Stay Current",
+      description: "Keep up with the latest market trends, regulations, and investment opportunities in real estate."
+    }
+  ];
+
   return (
     <div>
-      <PageHero
-        title="Real Estate Investment Blog"
-        description="Expert insights, tips, and strategies to help you succeed in real estate investing and property management."
+      <Hero
+        imageSrc={dummyImage}
+        imageAlt="Smar8 - Real Estate Investment Blog"
+        brandIcon={<FaNewspaper className="text-white text-sm" />}
+        brandText="Smar8 Blog"
+        headline="Expert Insights for Real Estate Investors"
+        subheadline="Discover expert insights, tips, and strategies to help you succeed in real estate investing and property management. Stay ahead of the curve with our comprehensive blog."
+        ctaText="Start Reading"
+        ctaUrl="/#"
+        features={features}
+        showSocialProof={false}
+        primaryColor="primary"
       />
       
-      <ContentSection title="Latest Articles">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200"></div>
-            <div className="p-6">
-              <div className="text-sm text-primary-600 mb-2">Property Management</div>
-              <h3 className="text-xl font-semibold mb-2">10 Essential Tips for New Landlords</h3>
-              <p className="text-gray-600 mb-4">Learn the fundamentals of property management to avoid common pitfalls and maximize your returns.</p>
-              <div className="text-sm text-gray-500">March 15, 2024 • 5 min read</div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200"></div>
-            <div className="p-6">
-              <div className="text-sm text-primary-600 mb-2">Investment Strategy</div>
-              <h3 className="text-xl font-semibold mb-2">How to Analyze Rental Property ROI</h3>
-              <p className="text-gray-600 mb-4">Master the art of calculating returns on investment to make smarter property decisions.</p>
-              <div className="text-sm text-gray-500">March 12, 2024 • 7 min read</div>
-            </div>
-          </div>
-          
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="h-48 bg-gray-200"></div>
-            <div className="p-6">
-              <div className="text-sm text-primary-600 mb-2">Market Trends</div>
-              <h3 className="text-xl font-semibold mb-2">2024 Real Estate Market Outlook</h3>
-              <p className="text-gray-600 mb-4">Stay ahead of the curve with our comprehensive analysis of emerging market trends.</p>
-              <div className="text-sm text-gray-500">March 10, 2024 • 6 min read</div>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      <Banner
+        headline="Your Complete Resource for Real Estate Success"
+        subheadline="From investment strategies to property management tips, our blog provides everything you need to make informed decisions and maximize your real estate returns."
+        ctaText="Explore Articles"
+        showImage={true}
+        imageSrc={dummyImage}
+        imageAlt="Blog Platform"
+        imageClassName="w-full max-w-3xl mx-auto rounded-xl shadow-2xl"
+      />
+      
+      {/* Blog Features Section - Using FeatureAccordion */}
+      <FeatureAccordion
+        title="Everything You Need to Succeed in Real Estate"
+        description="Our blog covers all aspects of real estate investing, from market analysis to practical management tips, helping you build a successful property portfolio."
+        features={blogFeatures}
+        imageSrc={dummyImage}
+        imageAlt="Blog Features"
+        defaultActiveFeature="investment-strategies"
+      />
 
-      <ContentSection className="bg-gray-50">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Stay Updated</h2>
-          <p className="text-xl text-gray-600 mb-8">Get the latest insights delivered to your inbox.</p>
-          <div className="max-w-md mx-auto">
-            <div className="flex space-x-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
-              />
-              <button className="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How to Use Our Blog"
+        subtitle="Simple steps to access expert knowledge and grow your real estate expertise"
+        steps={howItWorksSteps}
+        backgroundColor="bg-gray-50"
+      />
+
+      {/* Key Benefits Section - Using reusable component */}
+      <FeatureGrid
+        title="Key Benefits of Our Blog"
+        subtitle="Transform your real estate knowledge with expert insights and practical strategies"
+        features={keyBenefits}
+        backgroundColor="bg-white"
+        columns={3}
+      />
+
+      <Cta
+        heading="Ready to Boost Your Real Estate Knowledge?"
+        description="Join thousands of investors who rely on our blog for expert insights and practical strategies. Start reading today and take your real estate investments to the next level."
+        buttonText="Start Reading Now"
+        buttonUrl="/#"
+      />
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

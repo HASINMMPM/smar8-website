@@ -1,136 +1,177 @@
-import React from 'react';
-import PageHero from '../../components/commen/PageHero';
-import ContentSection from '../../components/commen/ContentSection';
+import Hero from '../../components/commen/Hero'
+import { FaCogs, FaUsers, FaChartLine, FaShieldAlt, FaDownload, FaEye, FaFilter } from 'react-icons/fa'
+import Banner from '../../components/commen/Banner'
+import dummyImage from '../../assets/dummy.jpg'
+import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
-const HowItWorks: React.FC = () => {
+const HowItWorksPage = () => {
+  // Features array for the Hero component
+  const features = [
+    {
+      icon: <FaCogs className="text-secondary-800 text-2xl" />,
+      title: "Simple setup and onboarding process"
+    },
+    {
+      icon: <FaUsers className="text-secondary-800 text-2xl" />,
+      title: "Comprehensive tenant management tools"
+    },
+    {
+      icon: <FaChartLine className="text-secondary-800 text-2xl" />,
+      title: "Financial tracking and reporting"
+    },
+    {
+      icon: <FaShieldAlt className="text-secondary-800 text-2xl" />,
+      title: "Secure and compliant operations"
+    }
+  ];
+
+  // How it works features for FeatureAccordion
+  const howItWorksFeatures = [
+    {
+      id: 'simple-setup',
+      title: "Simple Setup & Onboarding",
+      description: "Create your account and complete the onboarding process in minutes. Our team will guide you through every step to get you started quickly.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'property-management',
+      title: "Property Management",
+      description: "Add your properties to the platform and configure all essential details. Our system helps you optimize pricing and management strategies.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'tenant-screening',
+      title: "Tenant Screening & Selection",
+      description: "List your properties, screen applicants, and select the best tenants using our comprehensive screening tools and background checks.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'operations-management',
+      title: "Operations Management",
+      description: "Handle maintenance requests, collect rent, and manage all day-to-day operations through our integrated platform dashboard.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'performance-tracking',
+      title: "Performance Tracking",
+      description: "Monitor your investment performance with detailed analytics, reports, and insights to maximize returns and optimize strategy.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'scaling-growth',
+      title: "Scaling & Growth",
+      description: "As your portfolio grows, our platform scales with you, providing advanced tools for larger property management needs and portfolio expansion.",
+      learnMoreUrl: "#"
+    }
+  ];
+
+  // How it works steps
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Sign Up & Onboard",
+      description: "Create your account and complete the onboarding process. Our team will guide you through every step to ensure success."
+    },
+    {
+      step: 2,
+      title: "Add Your Properties",
+      description: "Input property details, upload photos, and set rental rates. Our system will help you optimize pricing and management strategies."
+    },
+    {
+      step: 3,
+      title: "Find Great Tenants",
+      description: "List your properties, screen applicants, and select the best tenants using our comprehensive screening tools and background checks."
+    },
+    {
+      step: 4,
+      title: "Manage & Scale",
+      description: "Handle operations, track performance, and scale your portfolio with our comprehensive property management platform."
+    }
+  ];
+
+  // Key benefits features
+  const keyBenefits = [
+    {
+      icon: <FaEye className="text-primary-600 text-xl" />,
+      title: "Comprehensive Platform",
+      description: "Access all the tools you need for property management in one integrated platform, from tenant screening to financial reporting."
+    },
+    {
+      icon: <FaFilter className="text-primary-600 text-xl" />,
+      title: "Streamlined Operations",
+      description: "Simplify your property management with automated processes, integrated tools, and comprehensive reporting systems."
+    },
+    {
+      icon: <FaDownload className="text-primary-600 text-xl" />,
+      title: "Scalable Solution",
+      description: "Start small and grow your portfolio with confidence, knowing our platform scales with your business needs."
+    }
+  ];
+
   return (
     <div>
-      <PageHero
-        title="How Smar8 Works"
-        description="Discover how our comprehensive property management platform simplifies your real estate investment journey."
+      <Hero
+        imageSrc={dummyImage}
+        imageAlt="Smar8 - How It Works"
+        brandIcon={<FaCogs className="text-white text-sm" />}
+        brandText="Smar8 Platform"
+        headline="How Smar8 Works for Real Estate Investors"
+        subheadline="Discover how our comprehensive property management platform simplifies your real estate investment journey with simple setup, powerful tools, and scalable solutions."
+        ctaText="Get Started Today"
+        ctaUrl="/#"
+        features={features}
+        showSocialProof={false}
+        primaryColor="primary"
       />
       
-      <ContentSection title="The Complete Property Management Solution">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Property Setup</h3>
-            <p className="text-gray-600">Add your properties to the platform and configure all the essential details in minutes.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Tenant Management</h3>
-            <p className="text-gray-600">Screen tenants, manage leases, and handle all tenant communications from one dashboard.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Financial Management</h3>
-            <p className="text-gray-600">Track rent collection, manage expenses, and maintain detailed financial records automatically.</p>
-          </div>
-        </div>
-      </ContentSection>
+      <Banner
+        headline="Complete Property Management Solution for Smar8 Business Owners"
+        subheadline="From simple setup to comprehensive portfolio management, Smar8 provides everything you need to succeed in real estate investing and property management."
+        ctaText="Explore Platform Features"
+        showImage={true}
+        imageSrc={dummyImage}
+        imageAlt="Platform Overview"
+        imageClassName="w-full max-w-3xl mx-auto rounded-xl shadow-2xl"
+      />
+      
+      {/* How It Works Features Section - Using FeatureAccordion */}
+      <FeatureAccordion
+        title="Everything You Need for Successful Property Management"
+        description="Our platform provides comprehensive tools to manage properties, screen tenants, handle operations, and track performance across your entire real estate portfolio."
+        features={howItWorksFeatures}
+        imageSrc={dummyImage}
+        imageAlt="Platform Features"
+        defaultActiveFeature="simple-setup"
+      />
 
-      <ContentSection className="bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-dark-900 mb-12 text-center">Step-by-Step Process</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  1
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Sign Up & Onboard</h3>
-                  <p className="text-gray-600">Create your account and complete the onboarding process. Our team will guide you through every step.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  2
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Add Your Properties</h3>
-                  <p className="text-gray-600">Input property details, upload photos, and set rental rates. Our system will help you optimize pricing.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  3
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Find Great Tenants</h3>
-                  <p className="text-gray-600">List your properties, screen applicants, and select the best tenants using our comprehensive screening tools.</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="space-y-8">
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  4
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Manage Operations</h3>
-                  <p className="text-gray-600">Handle maintenance requests, collect rent, and manage all day-to-day operations through our platform.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  5
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Track Performance</h3>
-                  <p className="text-gray-600">Monitor your investment performance with detailed analytics, reports, and insights to maximize returns.</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-4">
-                <div className="w-10 h-10 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                  6
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Scale & Grow</h3>
-                  <p className="text-gray-600">As your portfolio grows, our platform scales with you, providing tools for larger property management needs.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How Smar8 Works"
+        subtitle="Simple steps to successful property management and portfolio growth"
+        steps={howItWorksSteps}
+        backgroundColor="bg-gray-50"
+      />
 
-      <ContentSection>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-600 mb-8">Join thousands of successful real estate investors who trust Smar8.</p>
-          <div className="space-x-4">
-            <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </ContentSection>
+      {/* Key Benefits Section - Using reusable component */}
+      <FeatureGrid
+        title="Key Benefits of Smar8 Platform"
+        subtitle="Transform your property management with comprehensive tools and scalable solutions"
+        features={keyBenefits}
+        backgroundColor="bg-white"
+        columns={3}
+      />
+
+      <Cta
+        heading="Ready to Transform Your Property Management?"
+        description="Join thousands of successful real estate investors who trust Smar8. Start your journey today and discover how easy property management can be."
+        buttonText="Get Started Now"
+        buttonUrl="/#"
+      />
     </div>
-  );
-};
+  )
+}
 
-export default HowItWorks;
+export default HowItWorksPage

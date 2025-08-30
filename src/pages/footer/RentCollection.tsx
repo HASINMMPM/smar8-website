@@ -1,137 +1,177 @@
-import React from 'react';
-import PageHero from '../../components/commen/PageHero';
-import ContentSection from '../../components/commen/ContentSection';
+import Hero from '../../components/commen/Hero'
+import { FaMoneyBillWave, FaClock, FaShieldAlt, FaChartBar, FaDownload, FaEye, FaFilter } from 'react-icons/fa'
+import Banner from '../../components/commen/Banner'
+import dummyImage from '../../assets/dummy.jpg'
+import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
-const RentCollection: React.FC = () => {
+const RentCollection = () => {
+  // Features array for the Hero component
+  const features = [
+    {
+      icon: <FaMoneyBillWave className="text-secondary-800 text-2xl" />,
+      title: "Automated rent collection and processing"
+    },
+    {
+      icon: <FaClock className="text-secondary-800 text-2xl" />,
+      title: "Timely payments and late fee management"
+    },
+    {
+      icon: <FaShieldAlt className="text-secondary-800 text-2xl" />,
+      title: "Secure payment processing and verification"
+    },
+    {
+      icon: <FaChartBar className="text-secondary-800 text-2xl" />,
+      title: "Real-time tracking and reporting"
+    }
+  ];
+
+  // Rent collection features for FeatureAccordion
+  const rentCollectionFeatures = [
+    {
+      id: 'automated-payments',
+      title: "Automated Payment Processing",
+      description: "Set up recurring payments so rent is collected automatically on the due date, every time. Eliminate manual collection efforts and ensure consistent cash flow.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'secure-processing',
+      title: "Secure Payment Processing",
+      description: "Bank-level security ensures all transactions are protected and compliant with financial regulations. Your funds are safe and secure.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'real-time-tracking',
+      title: "Real-time Payment Tracking",
+      description: "Monitor payment status, track late fees, and view detailed transaction history in real-time. Stay informed about your rental income.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'tenant-portal',
+      title: "Tenant Payment Portal",
+      description: "Provide tenants with a convenient, self-service payment portal where they can set up recurring payments and manage their accounts.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'late-fee-management',
+      title: "Late Fee Management",
+      description: "Automatically calculate and apply late fees according to your lease terms. Maintain consistent payment policies across all properties.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'comprehensive-reporting',
+      title: "Comprehensive Reporting",
+      description: "Generate detailed reports on rent collection, payment history, and cash flow analysis to optimize your property management strategy.",
+      learnMoreUrl: "#"
+    }
+  ];
+
+  // How it works steps
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Property Setup",
+      description: "Add your rental properties and set rent amounts, due dates, and late fee policies in our system."
+    },
+    {
+      step: 2,
+      title: "Tenant Invitation",
+      description: "Send secure invitations to your tenants to set up their payment accounts and preferred payment methods."
+    },
+    {
+      step: 3,
+      title: "Payment Processing",
+      description: "Rent is automatically collected on due dates, with secure processing and immediate fund availability."
+    },
+    {
+      step: 4,
+      title: "Monitoring & Reporting",
+      description: "Track all payments, monitor cash flow, and access comprehensive reports for better financial management."
+    }
+  ];
+
+  // Key benefits features
+  const keyBenefits = [
+    {
+      icon: <FaEye className="text-primary-600 text-xl" />,
+      title: "Consistent Cash Flow",
+      description: "Ensure consistent cash flow with automated rent collection that eliminates late payments and reduces administrative overhead."
+    },
+    {
+      icon: <FaFilter className="text-primary-600 text-xl" />,
+      title: "Reduced Administrative Work",
+      description: "Minimize manual collection efforts and administrative tasks with automated payment processing and tenant self-service options."
+    },
+    {
+      icon: <FaDownload className="text-primary-600 text-xl" />,
+      title: "Tenant Convenience",
+      description: "Improve tenant satisfaction by providing convenient, self-service payment options that give them control over their payment schedules."
+    }
+  ];
+
   return (
     <div>
-      <PageHero
-        title="Automated Rent Collection"
-        description="Streamline your rent collection process with our automated system that ensures timely payments and reduces administrative overhead."
+      <Hero
+        imageSrc={dummyImage}
+        imageAlt="Smar8 - Automated Rent Collection"
+        brandIcon={<FaMoneyBillWave className="text-white text-sm" />}
+        brandText="Smar8 Rent Collection"
+        headline="Automated Rent Collection for Landlords"
+        subheadline="Streamline your rent collection process with our automated system that ensures timely payments, reduces administrative overhead, and provides secure payment processing."
+        ctaText="Get Started Today"
+        ctaUrl="/#"
+        features={features}
+        showSocialProof={false}
+        primaryColor="primary"
       />
       
-      <ContentSection title="Why Choose Our Rent Collection System?">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Automated Payments</h3>
-            <p className="text-gray-600">Set up recurring payments so rent is collected automatically on the due date, every time.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Secure Processing</h3>
-            <p className="text-gray-600">Bank-level security ensures all transactions are protected and compliant with financial regulations.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Real-time Tracking</h3>
-            <p className="text-gray-600">Monitor payment status, track late fees, and view detailed transaction history in real-time.</p>
-          </div>
-        </div>
-      </ContentSection>
+      <Banner
+        headline="Complete Rent Collection Solution for Smar8 Business Owners"
+        subheadline="From automated payment processing to comprehensive reporting, Smar8 provides everything you need to streamline rent collection and maintain consistent cash flow."
+        ctaText="Explore Rent Collection Features"
+        showImage={true}
+        imageSrc={dummyImage}
+        imageAlt="Rent Collection Platform"
+        imageClassName="w-full max-w-3xl mx-auto rounded-xl shadow-2xl"
+      />
+      
+      {/* Rent Collection Features Section - Using FeatureAccordion */}
+      <FeatureAccordion
+        title="Everything You Need for Successful Rent Collection"
+        description="Our platform provides comprehensive tools to automate rent collection, manage payments securely, and maintain detailed financial records across all your properties."
+        features={rentCollectionFeatures}
+        imageSrc={dummyImage}
+        imageAlt="Rent Collection Features"
+        defaultActiveFeature="automated-payments"
+      />
 
-      <ContentSection className="bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-dark-900 mb-8 text-center">How Rent Collection Works</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">For Landlords</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Set Up Properties</h4>
-                    <p className="text-gray-600">Add your rental properties and set rent amounts, due dates, and late fee policies.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Invite Tenants</h4>
-                    <p className="text-gray-600">Send secure invitations to your tenants to set up their payment accounts.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Receive Payments</h4>
-                    <p className="text-gray-600">Get notified when rent is paid and access funds immediately in your account.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">For Tenants</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    1
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Create Account</h4>
-                    <p className="text-gray-600">Set up your secure payment account with your preferred payment method.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    2
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Set Up Payments</h4>
-                    <p className="text-gray-600">Choose between automatic recurring payments or manual payments each month.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                    3
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">Stay Current</h4>
-                    <p className="text-gray-600">Receive payment confirmations and maintain a positive rental history.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How Smar8 Rent Collection Works"
+        subtitle="Simple steps to automate your rent collection and ensure consistent cash flow"
+        steps={howItWorksSteps}
+        backgroundColor="bg-gray-50"
+      />
 
-      <ContentSection>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Start Collecting Rent Today</h2>
-          <p className="text-xl text-gray-600 mb-8">Join thousands of landlords who have simplified their rent collection process.</p>
-          <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-            Get Started Now
-          </button>
-        </div>
-      </ContentSection>
+      {/* Key Benefits Section - Using reusable component */}
+      <FeatureGrid
+        title="Key Benefits of Smar8 Rent Collection"
+        subtitle="Transform your rent collection with automated processing and tenant convenience"
+        features={keyBenefits}
+        backgroundColor="bg-white"
+        columns={3}
+      />
+
+      <Cta
+        heading="Ready to Automate Your Rent Collection?"
+        description="Join thousands of landlords who trust Smar8 to handle rent collection automatically. Start streamlining your payment processes today and ensure consistent cash flow."
+        buttonText="Get Started Now"
+        buttonUrl="/#"
+      />
     </div>
-  );
-};
+  )
+}
 
-export default RentCollection;
+export default RentCollection

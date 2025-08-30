@@ -1,153 +1,177 @@
-import React from 'react';
-import PageHero from '../../components/commen/PageHero';
-import ContentSection from '../../components/commen/ContentSection';
+import Hero from '../../components/commen/Hero'
+import { FaCalculator, FaChartLine, FaFileInvoiceDollar, FaShieldAlt, FaDownload, FaEye, FaFilter } from 'react-icons/fa'
+import Banner from '../../components/commen/Banner'
+import dummyImage from '../../assets/dummy.jpg'
+import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
-const AccountingAndBookkeeping: React.FC = () => {
+const AccountingAndBookkeeping = () => {
+  // Features array for the Hero component
+  const features = [
+    {
+      icon: <FaCalculator className="text-secondary-800 text-2xl" />,
+      title: "Automated expense tracking and categorization"
+    },
+    {
+      icon: <FaChartLine className="text-secondary-800 text-2xl" />,
+      title: "Comprehensive financial reporting and analysis"
+    },
+    {
+      icon: <FaFileInvoiceDollar className="text-secondary-800 text-2xl" />,
+      title: "Tax optimization and compliance management"
+    },
+    {
+      icon: <FaShieldAlt className="text-secondary-800 text-2xl" />,
+      title: "Secure financial data and audit trails"
+    }
+  ];
+
+  // Accounting features for FeatureAccordion
+  const accountingFeatures = [
+    {
+      id: 'expense-tracking',
+      title: "Automated Expense Tracking",
+      description: "Automatically categorize and track all property-related expenses for tax optimization. Our system identifies deductible items and maintains detailed records for compliance.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'financial-reporting',
+      title: "Comprehensive Financial Reporting",
+      description: "Generate detailed financial reports including P&L statements, cash flow analysis, and tax summaries. Get real-time insights into your property portfolio performance.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'tax-optimization',
+      title: "Tax Optimization & Planning",
+      description: "Maximize deductions and ensure compliance with real estate tax regulations. Our experts help you navigate complex tax requirements and optimize your tax position.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'bank-reconciliation',
+      title: "Automated Bank Reconciliation",
+      description: "Streamline bank reconciliation with automated matching and error detection. Maintain accurate financial records with minimal manual effort.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'compliance-management',
+      title: "Regulatory Compliance",
+      description: "Stay compliant with all regulatory requirements including audit preparation, financial disclosures, and record keeping standards.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'cash-flow-analysis',
+      title: "Cash Flow Analysis",
+      description: "Monitor and analyze cash flow patterns to make informed investment decisions. Identify opportunities for optimization and risk mitigation.",
+      learnMoreUrl: "#"
+    }
+  ];
+
+  // How it works steps
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Data Collection",
+      description: "Automatically collect financial data from all your properties, including income, expenses, and transactions through our integrated platform."
+    },
+    {
+      step: 2,
+      title: "Categorization & Analysis",
+      description: "Our system categorizes transactions, identifies deductible items, and generates comprehensive financial reports for your review."
+    },
+    {
+      step: 3,
+      title: "Expert Review",
+      description: "Our accounting experts review your financial data, optimize tax positions, and ensure compliance with all regulatory requirements."
+    },
+    {
+      step: 4,
+      title: "Reporting & Insights",
+      description: "Receive detailed financial reports, tax summaries, and actionable insights to optimize your real estate investment strategy."
+    }
+  ];
+
+  // Key benefits features
+  const keyBenefits = [
+    {
+      icon: <FaEye className="text-primary-600 text-xl" />,
+      title: "Real Estate Expertise",
+      description: "Our team specializes in real estate accounting, understanding the unique challenges and opportunities in property investment."
+    },
+    {
+      icon: <FaFilter className="text-primary-600 text-xl" />,
+      title: "Technology-Driven",
+      description: "Advanced software and automation ensure accuracy, efficiency, and real-time access to your financial data."
+    },
+    {
+      icon: <FaDownload className="text-primary-600 text-xl" />,
+      title: "Tax Optimization",
+      description: "Maximize your deductions and minimize tax liability with our strategic tax planning and preparation services."
+    }
+  ];
+
   return (
     <div>
-      <PageHero
-        title="Accounting & Bookkeeping Solutions"
-        description="Professional accounting and bookkeeping services designed specifically for real estate investors to maximize tax benefits and maintain compliance."
+      <Hero
+        imageSrc={dummyImage}
+        imageAlt="Smar8 - Accounting & Bookkeeping Services"
+        brandIcon={<FaCalculator className="text-white text-sm" />}
+        brandText="Smar8 Accounting"
+        headline="Professional Accounting & Bookkeeping for Real Estate Investors"
+        subheadline="Maximize tax benefits, maintain compliance, and gain financial insights with our comprehensive accounting and bookkeeping services designed specifically for real estate investors."
+        ctaText="Get Started Today"
+        ctaUrl="/#"
+        features={features}
+        showSocialProof={false}
+        primaryColor="primary"
       />
       
-      <ContentSection title="Comprehensive Financial Management">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Expense Tracking</h3>
-            <p className="text-gray-600">Automatically categorize and track all property-related expenses for tax optimization.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Financial Reporting</h3>
-            <p className="text-gray-600">Generate comprehensive financial reports including P&L statements, cash flow analysis, and tax summaries.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Tax Optimization</h3>
-            <p className="text-gray-600">Maximize deductions and ensure compliance with real estate tax regulations and requirements.</p>
-          </div>
-        </div>
-      </ContentSection>
+      <Banner
+        headline="Complete Accounting Solution for Smar8 Business Owners"
+        subheadline="From automated expense tracking to tax optimization, Smar8 provides everything you need to manage your real estate finances professionally and efficiently."
+        ctaText="Explore Accounting Features"
+        showImage={true}
+        imageSrc={dummyImage}
+        imageAlt="Accounting Platform"
+        imageClassName="w-full max-w-3xl mx-auto rounded-xl shadow-2xl"
+      />
+      
+      {/* Accounting Features Section - Using FeatureAccordion */}
+      <FeatureAccordion
+        title="Everything You Need for Professional Financial Management"
+        description="Our platform provides comprehensive tools to automate expense tracking, generate financial reports, optimize taxes, and maintain compliance across all your properties."
+        features={accountingFeatures}
+        imageSrc={dummyImage}
+        imageAlt="Accounting Features"
+        defaultActiveFeature="expense-tracking"
+      />
 
-      <ContentSection className="bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-dark-900 mb-8 text-center">Our Accounting Services</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-primary-600">Monthly Bookkeeping</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Transaction categorization</li>
-                <li>• Bank reconciliation</li>
-                <li>• Expense tracking</li>
-                <li>• Income recording</li>
-                <li>• Monthly financial statements</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-primary-600">Tax Preparation</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Schedule E preparation</li>
-                <li>• Depreciation calculations</li>
-                <li>• Deduction optimization</li>
-                <li>• Tax planning strategies</li>
-                <li>• IRS compliance</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-primary-600">Financial Analysis</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Cash flow analysis</li>
-                <li>• Profitability reports</li>
-                <li>• Investment performance</li>
-                <li>• Budget planning</li>
-                <li>• ROI calculations</li>
-              </ul>
-            </div>
-            
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-primary-600">Compliance & Reporting</h3>
-              <ul className="space-y-2 text-gray-600">
-                <li>• Regulatory compliance</li>
-                <li>• Audit preparation</li>
-                <li>• Financial disclosures</li>
-                <li>• Record keeping</li>
-                <li>• Documentation management</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How Smar8 Accounting Works"
+        subtitle="Simple steps to professional financial management and tax optimization"
+        steps={howItWorksSteps}
+        backgroundColor="bg-gray-50"
+      />
 
-      <ContentSection>
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Why Choose Our Accounting Services?</h2>
-          <div className="space-y-6">
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                1
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Real Estate Expertise</h3>
-                <p className="text-gray-600">Our team specializes in real estate accounting, understanding the unique challenges and opportunities in property investment.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                2
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Technology-Driven</h3>
-                <p className="text-gray-600">Advanced software and automation ensure accuracy, efficiency, and real-time access to your financial data.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-lg font-bold flex-shrink-0">
-                3
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Tax Optimization</h3>
-                <p className="text-gray-600">Maximize your deductions and minimize tax liability with our strategic tax planning and preparation services.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* Key Benefits Section - Using reusable component */}
+      <FeatureGrid
+        title="Key Benefits of Smar8 Accounting"
+        subtitle="Transform your financial management with professional accounting services and real estate expertise"
+        features={keyBenefits}
+        backgroundColor="bg-white"
+        columns={3}
+      />
 
-      <ContentSection className="bg-primary-50">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Ready to Optimize Your Finances?</h2>
-          <p className="text-xl text-gray-600 mb-8">Let our expert team handle your accounting while you focus on growing your real estate portfolio.</p>
-          <div className="space-x-4">
-            <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-              Get Started Today
-            </button>
-            <button className="border border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition-colors">
-              Schedule Consultation
-            </button>
-          </div>
-        </div>
-      </ContentSection>
+      <Cta
+        heading="Ready to Optimize Your Finances?"
+        description="Join thousands of real estate investors who trust Smar8 to handle their accounting professionally. Let our expert team manage your finances while you focus on growing your portfolio."
+        buttonText="Get Started Now"
+        buttonUrl="/#"
+      />
     </div>
-  );
-};
+  )
+}
 
-export default AccountingAndBookkeeping;
+export default AccountingAndBookkeeping

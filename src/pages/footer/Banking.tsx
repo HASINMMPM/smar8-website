@@ -1,97 +1,177 @@
-import React from 'react';
-import PageHero from '../../components/commen/PageHero';
-import ContentSection from '../../components/commen/ContentSection';
+import Hero from '../../components/commen/Hero'
+import { FaUniversity, FaShieldAlt, FaChartLine, FaDownload, FaEye, FaFilter } from 'react-icons/fa'
+import Banner from '../../components/commen/Banner'
+import dummyImage from '../../assets/dummy.jpg'
+import FeatureAccordion from '../../components/commen/FeatureAccordion'
+import Cta from '../../components/commen/Cta'
+import HowItWorks from '../../components/commen/HowItWorks'
+import FeatureGrid from '../../components/commen/FeatureGrid'
 
-const Banking: React.FC = () => {
+const Banking = () => {
+  // Features array for the Hero component
+  const features = [
+    {
+      icon: <FaUniversity className="text-secondary-800 text-2xl" />,
+      title: "Separate business and personal accounts"
+    },
+    {
+      icon: <FaShieldAlt className="text-secondary-800 text-2xl" />,
+      title: "Secure banking with fraud protection"
+    },
+    {
+      icon: <FaChartLine className="text-secondary-800 text-2xl" />,
+      title: "Real-time financial analytics and reporting"
+    },
+    {
+      icon: <FaDownload className="text-secondary-800 text-2xl" />,
+      title: "Automated rent collection and deposits"
+    }
+  ];
+
+  // Banking features for FeatureAccordion
+  const bankingFeatures = [
+    {
+      id: 'separate-accounts',
+      title: "Separate Business Accounts",
+      description: "Keep your personal and business finances completely separate with dedicated accounts for each property. Maintain clear financial boundaries for better organization.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'automated-rent-collection',
+      title: "Automated Rent Collection",
+      description: "Set up automatic rent deposits and never worry about late payments again. Streamline your cash flow with automated collection systems.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'real-time-analytics',
+      title: "Real-time Financial Analytics",
+      description: "Track your cash flow, expenses, and profitability with detailed financial reports. Make informed decisions with comprehensive financial insights.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'fraud-protection',
+      title: "Advanced Fraud Protection",
+      description: "Bank-level security with advanced fraud detection and protection. Your funds are safe with our comprehensive security measures.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'mobile-banking',
+      title: "Mobile Banking Access",
+      description: "Access your accounts anytime, anywhere with our secure mobile banking app. Manage your finances on the go with full functionality.",
+      learnMoreUrl: "#"
+    },
+    {
+      id: 'integrated-finances',
+      title: "Integrated Financial Management",
+      description: "Seamlessly integrate your banking with property management tools for comprehensive financial oversight and simplified operations.",
+      learnMoreUrl: "#"
+    }
+  ];
+
+  // How it works steps
+  const howItWorksSteps = [
+    {
+      step: 1,
+      title: "Open Your Account",
+      description: "Complete a simple online application and get approved in minutes with our streamlined process designed for real estate investors."
+    },
+    {
+      step: 2,
+      title: "Connect Your Properties",
+      description: "Link your rental properties and set up automatic rent collection from your tenants through our integrated system."
+    },
+    {
+      step: 3,
+      title: "Manage Your Finances",
+      description: "Use our dashboard to monitor cash flow, pay expenses, and track your investment performance with real-time updates."
+    },
+    {
+      step: 4,
+      title: "Scale & Grow",
+      description: "As your portfolio grows, our banking solutions scale with you, providing advanced tools for larger property management needs."
+    }
+  ];
+
+  // Key benefits features
+  const keyBenefits = [
+    {
+      icon: <FaEye className="text-primary-600 text-xl" />,
+      title: "Financial Organization",
+      description: "Keep your personal and business finances completely separate with dedicated accounts for better organization and tax compliance."
+    },
+    {
+      icon: <FaFilter className="text-primary-600 text-xl" />,
+      title: "Automated Operations",
+      description: "Streamline your financial operations with automated rent collection, deposits, and comprehensive reporting systems."
+    },
+    {
+      icon: <FaDownload className="text-primary-600 text-xl" />,
+      title: "Real-time Insights",
+      description: "Access real-time financial data and analytics to make informed decisions and optimize your investment strategy."
+    }
+  ];
+
   return (
     <div>
-      <PageHero
-        title="Banking Solutions for Real Estate Investors"
-        description="Streamline your property management finances with our comprehensive banking solutions designed specifically for real estate investors."
+      <Hero
+        imageSrc={dummyImage}
+        imageAlt="Smar8 - Banking Solutions for Real Estate Investors"
+        brandIcon={<FaUniversity className="text-white text-sm" />}
+        brandText="Smar8 Banking"
+        headline="Banking Solutions for Real Estate Investors"
+        subheadline="Streamline your property management finances with our comprehensive banking solutions designed specifically for real estate investors. Separate accounts, automated operations, and real-time insights."
+        ctaText="Open Account Today"
+        ctaUrl="/#"
+        features={features}
+        showSocialProof={false}
+        primaryColor="primary"
       />
       
-      <ContentSection title="Why Choose Our Banking Solutions?">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Separate Business Accounts</h3>
-            <p className="text-gray-600">Keep your personal and business finances completely separate with dedicated accounts for each property.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Automated Rent Collection</h3>
-            <p className="text-gray-600">Set up automatic rent deposits and never worry about late payments again.</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Real-time Analytics</h3>
-            <p className="text-gray-600">Track your cash flow, expenses, and profitability with detailed financial reports.</p>
-          </div>
-        </div>
-      </ContentSection>
+      <Banner
+        headline="Complete Banking Solution for Smar8 Business Owners"
+        subheadline="From separate business accounts to automated rent collection, Smar8 provides everything you need to manage your real estate finances professionally and efficiently."
+        ctaText="Explore Banking Features"
+        showImage={true}
+        imageSrc={dummyImage}
+        imageAlt="Banking Platform"
+        imageClassName="w-full max-w-3xl mx-auto rounded-xl shadow-2xl"
+      />
+      
+      {/* Banking Features Section - Using FeatureAccordion */}
+      <FeatureAccordion
+        title="Everything You Need for Professional Financial Management"
+        description="Our banking platform provides comprehensive tools to separate finances, automate operations, and maintain detailed financial records across all your properties."
+        features={bankingFeatures}
+        imageSrc={dummyImage}
+        imageAlt="Banking Features"
+        defaultActiveFeature="separate-accounts"
+      />
 
-      <ContentSection className="bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-dark-900 mb-8 text-center">How It Works</h2>
-          <div className="space-y-8">
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                1
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Open Your Account</h3>
-                <p className="text-gray-600">Complete a simple online application and get approved in minutes with our streamlined process.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                2
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Connect Your Properties</h3>
-                <p className="text-gray-600">Link your rental properties and set up automatic rent collection from your tenants.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start space-x-4">
-              <div className="w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                3
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold mb-2">Manage Your Finances</h3>
-                <p className="text-gray-600">Use our dashboard to monitor cash flow, pay expenses, and track your investment performance.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ContentSection>
+      {/* How It Works Section - Using reusable component */}
+      <HowItWorks
+        title="How Smar8 Banking Works"
+        subtitle="Simple steps to professional banking services and financial management"
+        steps={howItWorksSteps}
+        backgroundColor="bg-gray-50"
+      />
 
-      <ContentSection>
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-dark-900 mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-600 mb-8">Join thousands of real estate investors who trust our banking solutions.</p>
-          <button className="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
-            Open Account Today
-          </button>
-        </div>
-      </ContentSection>
+      {/* Key Benefits Section - Using reusable component */}
+      <FeatureGrid
+        title="Key Benefits of Smar8 Banking"
+        subtitle="Transform your financial management with professional banking services and real estate expertise"
+        features={keyBenefits}
+        backgroundColor="bg-white"
+        columns={3}
+      />
+
+      <Cta
+        heading="Ready to Optimize Your Banking Experience?"
+        description="Join thousands of real estate investors who trust Smar8 for their banking needs. Let our expert team manage your finances while you focus on growing your portfolio."
+        buttonText="Open Account Now"
+        buttonUrl="/#"
+      />
     </div>
-  );
-};
+  )
+}
 
-export default Banking;
+export default Banking

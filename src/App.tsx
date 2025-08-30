@@ -47,6 +47,21 @@ import AccountingAndBookkeeping from "./pages/footer/AccountingAndBookkeeping";
 import Blog from "./pages/footer/Blog";
 import RentCollection from "./pages/footer/RentCollection";
 
+// Newly created footer pages
+import TenantScreening from "./pages/footer/TenantScreening";
+import PartnerWithUs from "./pages/footer/PartnerWithUs";
+import ReferInvestor from "./pages/footer/ReferInvestor";
+import NewsCoverage from "./pages/footer/NewsCoverage";
+import Careers from "./pages/footer/Careers";
+import Services from "./pages/footer/Services";
+import LandlordInsurance from "./pages/footer/LandlordInsurance";
+import RentalPropertyLoans from "./pages/footer/RentalPropertyLoans";
+import RentalCalculator from "./pages/footer/RentalCalculator";
+import Demo from "./pages/footer/Demo";
+import Webinars from "./pages/footer/Webinars";
+import Security from "./pages/footer/Security";
+import Legal from "./pages/footer/Legal";
+
 const App = () => {
   return (
     <Routes>
@@ -244,7 +259,60 @@ const App = () => {
           path="/rent-collection"
           element={<RentCollection />}
         />    
-          
+
+        {/* Newly added footer page routes */}
+        <Route
+          path="/partner-with-us"
+          element={<PartnerWithUs />}
+        />
+        <Route
+          path="/refer-a-real-estate-investor"
+          element={<ReferInvestor />}
+        />
+        <Route
+          path="/news-coverage"
+          element={<NewsCoverage />}
+        />
+        <Route
+          path="/careers"
+          element={<Careers />}
+        />
+        <Route
+          path="/services"
+          element={<Services />}
+        />
+        <Route
+          path="/landlord-insurance"
+          element={<LandlordInsurance />}
+        />
+        <Route
+          path="/rental-property-loans"
+          element={<RentalPropertyLoans />}
+        />
+        <Route
+          path="/rental-calculator"
+          element={<RentalCalculator />}
+        />
+        <Route
+          path="/demo"
+          element={<Demo />}
+        />
+        <Route
+          path="/webinars"
+          element={<Webinars />}
+        />
+        <Route
+          path="/security"
+          element={<Security />}
+        />
+        <Route
+          path="/legal"
+          element={<Legal />}
+        />
+        <Route
+          path="/tenant-screening"
+          element={<TenantScreening />}
+        />
 
         {/* <Route
           path="/terms-of-service"

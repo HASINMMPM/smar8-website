@@ -146,7 +146,19 @@ const TestimonialAndSolutions: React.FC = () => {
 
   return (
     <section className="bg-secondary-50 rounded-t-3xl">
-             {/* Customer Testimonial Section */}
+      {/* Main Title Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900 mb-6">
+            Trusted by Property Professionals
+          </h2>
+          <p className="text-lg md:text-xl text-dark-600 max-w-3xl mx-auto leading-relaxed">
+            Join thousands of landlords, property managers, and service professionals who trust our platform to streamline their operations and grow their business.
+          </p>
+        </div>
+      </div>
+
+      {/* Customer Testimonial Section */}
        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16">
          
                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

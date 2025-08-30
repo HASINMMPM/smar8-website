@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router";
 import LandingPage from "./pages/LandingPage";
 import Layout from "./pages/Layout";
 import ErrorFile from './pages/ErrorFile';
-import AboutUs from './pages/AboutUs';
+import AboutUs from './pages/footer/AboutUs';
 import WhyUs from './pages/Why-us';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';

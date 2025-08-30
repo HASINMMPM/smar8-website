@@ -41,6 +41,11 @@ import LandlordForms from "./pages/header/LandlordForms";
 import AffiliateProgram from "./pages/header/AffiliateProgram";
 import ContactUs from "./pages/header/ContactUs";
 import Landlords from "./pages/header/Landlords";
+import Banking from "./pages/footer/Banking";
+import HowItWorks from "./pages/footer/HowItWorks";
+import AccountingAndBookkeeping from "./pages/footer/AccountingAndBookkeeping";
+import Blog from "./pages/footer/Blog";
+import RentCollection from "./pages/footer/RentCollection";
 
 const App = () => {
   return (
@@ -214,6 +219,32 @@ const App = () => {
           path="/resources/contact-us"
           element={<ContactUs />}
         />
+        <Route
+          path="/banking"
+          element={<Banking />}
+        />
+      
+        <Route
+          path="/how-it-works"
+          element={<HowItWorks />}
+        />    
+        <Route
+          path="/accounting-bookkeeping"
+          element={<AccountingAndBookkeeping />}
+        />    
+        <Route
+          path="/help-center"
+          element={<HelpCenter />}
+        />    
+        <Route
+          path="/blog"
+          element={<Blog />}
+        />    
+        <Route
+          path="/rent-collection"
+          element={<RentCollection />}
+        />    
+          
 
         {/* <Route
           path="/terms-of-service"

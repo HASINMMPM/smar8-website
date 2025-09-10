@@ -62,6 +62,15 @@ import Webinars from "./pages/footer/Webinars";
 import Security from "./pages/footer/Security";
 import Legal from "./pages/footer/Legal";
 
+// Additional footer pages created
+import OurCustomers from "./pages/footer/OurCustomers";
+import SecurityDeposits from "./pages/footer/SecurityDeposits";
+import SavingsAccounts from "./pages/footer/SavingsAccounts";
+import PriceYourRentals from "./pages/footer/PriceYourRentals";
+import InvestingGuides from "./pages/footer/InvestingGuides";
+import RentalForms from "./pages/footer/RentalForms";
+import ProductUpdates from "./pages/footer/ProductUpdates";
+
 const App = () => {
   return (
     <Routes>
@@ -238,27 +247,27 @@ const App = () => {
           path="/banking"
           element={<Banking />}
         />
-      
+
         <Route
           path="/how-it-works"
           element={<HowItWorks />}
-        />    
+        />
         <Route
           path="/accounting-bookkeeping"
           element={<AccountingAndBookkeeping />}
-        />    
+        />
         <Route
           path="/help-center"
           element={<HelpCenter />}
-        />    
+        />
         <Route
           path="/blog"
           element={<Blog />}
-        />    
+        />
         <Route
           path="/rent-collection"
           element={<RentCollection />}
-        />    
+        />
 
         {/* Newly added footer page routes */}
         <Route
@@ -314,48 +323,35 @@ const App = () => {
           element={<TenantScreening />}
         />
 
-        {/* <Route
-          path="/terms-of-service"
-          element={<TermsOfService />}
+        {/* Additional footer page routes */}
+        <Route
+          path="/our-customers"
+          element={<OurCustomers />}
         />
         <Route
-          path="/helpcenter"
-          element={<HelpCenter />}
+          path="/security-deposits"
+          element={<SecurityDeposits />}
         />
         <Route
-          path="/career"
-          element={<Careers />}
-        />
-  
-        <Route
-          path="/about-us"
-          element={<AboutUs />}
+          path="/savings-accounts"
+          element={<SavingsAccounts />}
         />
         <Route
-          path="/contact-us"
-          element={<ContactUs />}
+          path="/price-your-rentals"
+          element={<PriceYourRentals />}
         />
         <Route
-          path="/privacy-policy"
-          element={<PrivacyPolicy />}
+          path="/investing-guides"
+          element={<InvestingGuides />}
         />
         <Route
-          path="/mobile-app"
-          element={<MobileApp />}
+          path="/rental-forms"
+          element={<RentalForms />}
         />
         <Route
-          path="/web-platform"
-          element={<WebPlatform />}
+          path="/product-updates"
+          element={<ProductUpdates />}
         />
-        <Route
-          path="/api"
-          element={<Api />}
-        />
-        <Route
-          path="/pricing"
-          element={<Pricing />}
-        /> */}
-
 
       </Route>
     </Routes>

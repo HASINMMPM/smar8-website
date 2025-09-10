@@ -11,18 +11,18 @@
 }   
 
 @theme {
-        /* Primary */
-        --color-primary-50:  #f0f0ff;
-        --color-primary-100: #e0e0ff;
-        --color-primary-200: #c7c7ff;
-        --color-primary-300: #a5a5ff;
-        --color-primary-400: #8181ff;
-        --color-primary-500: #3F3CFB; /* Main primary */
-        --color-primary-600: #2d2ad8;
-        --color-primary-700: #2523b5;
-        --color-primary-800: #1f1d92;
-        --color-primary-900: #1a1877;
-        --color-primary-950: #0f0e4a;
+        /* Primary - Purple theme matching the design */
+        --color-primary-50:  #f8f5ff;
+        --color-primary-100: #f0ebff;
+        --color-primary-200: #e5d9ff;
+        --color-primary-300: #d4bfff;
+        --color-primary-400: #c19bff;
+        --color-primary-500: #6A35F7; /* Main primary - vibrant purple */
+        --color-primary-600: #5a2dd1;
+        --color-primary-700: #4a25b5;
+        --color-primary-800: #3a1d99;
+        --color-primary-900: #2a1577;
+        --color-primary-950: #1a0d4a;
       
         /* Secondary */
         --color-secondary-50:  #f8f5ff;
@@ -87,6 +87,55 @@
   p {
     font-family: var(--font-roboto);
     font-weight: 400;
+  }
+
+  /* Modern Design Utilities */
+  .modern-card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100;
+  }
+  
+  .modern-button {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .modern-button-primary {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-primary-500 text-white hover:bg-primary-600 shadow-lg hover:shadow-xl;
+  }
+  
+  .modern-button-secondary {
+    @apply px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-white text-primary-500 border-2 border-primary-500 hover:bg-primary-50;
+  }
+  
+  .modern-input {
+    @apply px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300;
+  }
+  
+  .modern-section {
+    @apply py-16 lg:py-24;
+  }
+  
+  .modern-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .modern-heading {
+    @apply text-3xl lg:text-4xl xl:text-5xl font-bold text-dark-900 leading-tight;
+  }
+  
+  .modern-subheading {
+    @apply text-lg lg:text-xl text-dark-600 leading-relaxed;
+  }
+  
+  .modern-text {
+    @apply text-base text-dark-600 leading-relaxed;
+  }
+  
+  .modern-gradient {
+    @apply bg-gradient-to-br from-primary-50 to-secondary-50;
+  }
+  
+  .modern-shadow {
+    @apply shadow-xl shadow-primary-500/10;
   }
 
   /* Custom Range Slider Styles */

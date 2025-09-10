@@ -33,39 +33,39 @@ const FAQ = ({ title, items, className = "", titleClassName = "" }: FAQProps) =>
   };
 
   return (
-    <section className={`bg-white py-16 lg:py-24 ${className}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className={`bg-white modern-section ${className}`}>
+      <div className="modern-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           
           {/* Left Column - FAQ Title */}
           <div className="flex items-start">
-            <h2 className={`text-4xl lg:text-5xl font-bold text-gray-900 leading-tight ${titleClassName}`}>
+            <h2 className={`modern-heading ${titleClassName}`}>
               {title}
             </h2>
           </div>
 
           {/* Right Column - FAQ Items */}
-          <div className="space-y-0">
+          <div className="space-y-4">
             {items.map((item) => {
               const isOpen = openItems.includes(item.id);
               
               return (
-                <div key={item.id} className="border-b border-gray-200 last:border-b-0">
+                <div key={item.id} className="modern-card p-6 border border-gray-100">
                   <button
                     onClick={() => toggleItem(item.id)}
                     onKeyDown={(e) => handleKeyDown(e, item.id)}
-                    className="w-full px-2 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:bg-gray-50"
+                    className="w-full text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:bg-gray-50 rounded-lg p-2 -m-2"
                     aria-expanded={isOpen}
                     aria-controls={`faq-answer-${item.id}`}
                   >
-                    <span className="text-lg font-medium text-gray-900 pr-4">
+                    <span className="text-lg font-semibold text-dark-900 pr-4">
                       {item.question}
                     </span>
                     <div className="flex-shrink-0">
                       {isOpen ? (
-                        <FaMinus className="w-5 h-5 text-gray-500" />
+                        <FaMinus className="w-5 h-5 text-primary-500" />
                       ) : (
-                        <FaPlus className="w-5 h-5 text-gray-500" />
+                        <FaPlus className="w-5 h-5 text-primary-500" />
                       )}
                     </div>
                   </button>
@@ -76,8 +76,8 @@ const FAQ = ({ title, items, className = "", titleClassName = "" }: FAQProps) =>
                       isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                     }`}
                   >
-                    <div className="pb-6 pr-8">
-                      <p className="text-gray-600 leading-relaxed">
+                    <div className="pt-4 pr-8">
+                      <p className="text-dark-600 leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

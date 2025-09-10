@@ -14,18 +14,18 @@ const PageHero: React.FC<PageHeroProps> = ({
   className = "" 
 }) => {
   return (
-    <div className={`relative bg-gradient-to-r from-dark-900 to-dark-800 text-white py-20 ${className}`}>
+    <div className={`relative bg-gradient-to-br from-primary-500 to-primary-600 text-white modern-section ${className}`}>
       {backgroundImage && (
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-20 rounded-b-3xl"
           style={{ backgroundImage: `url(${backgroundImage})` }}
         />
       )}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+      <div className="relative modern-container text-center">
+        <h1 className="modern-heading text-white mb-6">
           {title}
         </h1>
-        <p className="text-xl text-tertiary-100 max-w-3xl mx-auto leading-relaxed">
+        <p className="modern-subheading text-primary-100 max-w-3xl mx-auto">
           {description}
         </p>
       </div>

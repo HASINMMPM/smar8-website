@@ -19,43 +19,45 @@ const Banner: React.FC<BannerProps> = ({
   showImage = false,
   imageSrc,
   imageAlt,
-  imageClassName = "w-full max-w-2xl mx-auto rounded-lg shadow-xl"
+  imageClassName = "w-full max-w-2xl mx-auto rounded-2xl modern-shadow"
 }) => {
   return (
     <section className="relative overflow-hidden">
-      <div className="bg-dark-800 pt-16 md:pt-24 mb-16 md:mb-24 rounded-2xl max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Section - Dark Teal Background */}
-        <div className="text-center mb-16">
-          {/* Headline */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            {headline}
-          </h2>
-          
-          {/* Sub-headline */}
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            {subheadline}
-          </p>
-          
-          {/* CTA Button */}
-          <button 
-            onClick={onCtaClick}
-            className="bg-primary-500 hover:bg-primary-600 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center gap-3 mx-auto"
-          >
-            {ctaText}
-            <FaArrowRight className="text-white" />
-          </button>
-        </div>
-
-        {/* Bottom Section - Image */}
-        {showImage && imageSrc && (
-          <div className="relative text-center">
-            <img 
-              src={imageSrc} 
-              alt={imageAlt || "Banner Image"} 
-              className={imageClassName}
-            />
+      <div className="modern-card bg-gradient-to-br from-primary-500 to-primary-600 text-white modern-section mb-16">
+        <div className="modern-container">
+          {/* Top Section - Purple Background */}
+          <div className="text-center mb-16">
+            {/* Headline */}
+            <h2 className="modern-heading text-white mb-6">
+              {headline}
+            </h2>
+            
+            {/* Sub-headline */}
+            <p className="modern-subheading text-primary-100 max-w-4xl mx-auto mb-8">
+              {subheadline}
+            </p>
+            
+            {/* CTA Button */}
+            <button 
+              onClick={onCtaClick}
+              className="modern-button bg-white text-primary-500 hover:bg-gray-50 flex items-center gap-3 mx-auto"
+            >
+              {ctaText}
+              <FaArrowRight className="w-4 h-4" />
+            </button>
           </div>
-        )}
+
+          {/* Bottom Section - Image */}
+          {showImage && imageSrc && (
+            <div className="relative text-center">
+              <img 
+                src={imageSrc} 
+                alt={imageAlt || "Banner Image"} 
+                className={imageClassName}
+              />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

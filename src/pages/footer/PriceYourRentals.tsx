@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaCalculator, FaChartLine, FaMapMarkerAlt, FaBed, FaBath, FaRuler } from 'react-icons/fa';
+import { FaCalculator, FaChartLine, FaMapMarkerAlt } from 'react-icons/fa';
 import { PageHero, ContentSection, Cta } from '../../components/commen';
 
 const PriceYourRentals: React.FC = () => {
@@ -9,7 +9,7 @@ const PriceYourRentals: React.FC = () => {
     bathrooms: '',
     squareFeet: '',
     location: '',
-    amenities: []
+    amenities: [] as string[]
   });
 
   const [estimatedRent, setEstimatedRent] = useState<number | null>(null);

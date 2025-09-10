@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPiggyBank, FaChartLine, FaShieldAlt, FaMobile, FaClock, FaDollarSign } from 'react-icons/fa';
+import { FaPiggyBank, FaChartLine, FaShieldAlt, FaMobile, FaClock, FaDollarSign, FaCheckCircle } from 'react-icons/fa';
 
 const SavingsAccounts: React.FC = () => {
   const features = [

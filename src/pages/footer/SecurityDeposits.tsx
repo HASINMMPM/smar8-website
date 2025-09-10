@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaShieldAlt, FaLock, FaCheckCircle, FaClock, FaDollarSign, FaFileAlt } from 'react-icons/fa';
-import { PageHero, ContentSection, Cta } from '../../components/commen';
+import { PageHero, ContentSection } from '../../components/commen';
 
 const SecurityDeposits: React.FC = () => {
   const features = [

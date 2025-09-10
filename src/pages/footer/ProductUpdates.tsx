@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaRocket, FaBug, FaStar, FaBell, FaDownload, FaCode } from 'react-icons/fa';
+import { FaRocket, FaBug, FaStar, FaBell, FaDownload, FaCode, FaCheckCircle } from 'react-icons/fa';
 
 const ProductUpdates: React.FC = () => {
   const updates = [

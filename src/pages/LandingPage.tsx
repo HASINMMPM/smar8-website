@@ -5,7 +5,7 @@ import IntegrationsAndFeatures from '../components/landingpage/IntegrationsAndFe
 import TestimonialAndSolutions from '../components/commen/TestimonialAndSolutions'
 // import PricingSection from '../components/landingpage/PricingSection'
 import ModernFAQ from '../components/landingpage/ModernFAQ'
-import BlogSection from '../components/landingpage/BlogSection'
+// import BlogSection from '../components/landingpage/BlogSection'
 import ModernCTA from '../components/landingpage/ModernCTA'
 
 const LandingPage = () => {

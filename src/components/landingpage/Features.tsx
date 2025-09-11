@@ -1,39 +1,46 @@
 import React from 'react';
-import dualMobile from '../../assets/dual-mobile.jpg';
+import dualMobile from '../../assets/dual-mobile.webp';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 // Feature data array for reusability
 const featuresData = [
   {
     id: 1,
     number: "01",
-    title: "Modern Design",
-    subtitle: "We follow ui design",
-    description: "Business changes you. As you move thro this life and this world, you change thin slightly, you leave marks behind."
+    title: "Property Management",
+    subtitle: "Complete property oversight",
+    description: "Streamline your property operations with our comprehensive management tools. Track maintenance, handle tenant requests, and manage property portfolios efficiently."
   },
   {
     id: 2,
     number: "02", 
-    title: "Easy Installation",
-    subtitle: "You can install our app",
-    description: "Business changes you. As you move thro this life and this world, you change thin slightly, you leave marks behind."
+    title: "Tenant Screening",
+    subtitle: "Thorough background verification",
+    description: "Comprehensive tenant screening with background checks, credit reports, and rental history verification. Make informed decisions with confidence."
   },
   {
     id: 3,
     number: "03",
-    title: "Weakly Update",
-    subtitle: "We relased new version",
-    description: "Business changes you. As you move thro this life and this world, you change thin slightly, you leave marks behind."
+    title: "Financial Analytics",
+    subtitle: "Data-driven insights",
+    description: "Advanced reporting and analytics to track income, expenses, and property performance. Get insights to optimize your rental business."
   },
   {
     id: 4,
     number: "04",
-    title: "24/7 Support",
-    subtitle: "We offer 24/7 support",
-    description: "Business changes you. As you move thro this life and this world, you change thin slightly, you leave marks behind."
+    title: "Secure Payments",
+    subtitle: "Safe & automated collection",
+    description: "Secure online rent collection with automated reminders and late fee management. Multiple payment options for tenant convenience."
   }
 ];
 
+
 const Features: React.FC = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: leftRef, isVisible: leftVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: centerRef, isVisible: centerVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: rightRef, isVisible: rightVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+
   return (
     <section className="bg-gradient-to-r from-purple-50 via-blue-50 to-green-50 modern-section relative overflow-hidden">
       {/* Dotted background pattern */}
@@ -46,7 +53,14 @@ const Features: React.FC = () => {
       
       <div className="modern-container relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
           <p className="text-primary-500 text-sm font-medium mb-4">
             Most Popular Application Features
           </p>
@@ -59,7 +73,14 @@ const Features: React.FC = () => {
         <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
           
           {/* Left Column - Features 1 & 3 */}
-          <div className="space-y-8">
+          <div 
+            ref={leftRef}
+            className={`space-y-8 transition-all duration-1000 ease-out delay-200 ${
+              leftVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
             {featuresData.filter((_, index) => index % 2 === 0).map((feature) => (
               <div key={feature.id} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start gap-4">
@@ -84,18 +105,36 @@ const Features: React.FC = () => {
           </div>
 
           {/* Center Column - Dual Mobile Mockup */}
-          <div className="flex justify-center items-end">
+          <div 
+            ref={centerRef}
+            className={`flex justify-center items-end transition-all duration-1000 ease-out delay-400 ${
+              centerVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-95'
+            }`}
+          >
             <div className="relative max-w-sm">
               <img
                 src={dualMobile}
                 alt="Dual Mobile App Mockup"
-                className="w-full h-auto object-contain"
+                className={`w-full h-auto object-contain transition-all duration-1000 ease-out ${
+                  centerVisible 
+                    ? 'animate-pulse-scale' 
+                    : ''
+                }`}
               />
             </div>
           </div>
 
           {/* Right Column - Features 2 & 4 */}
-          <div className="space-y-8">
+          <div 
+            ref={rightRef}
+            className={`space-y-8 transition-all duration-1000 ease-out delay-600 ${
+              rightVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-8'
+            }`}
+          >
             {featuresData.filter((_, index) => index % 2 === 1).map((feature) => (
               <div key={feature.id} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-start gap-4">

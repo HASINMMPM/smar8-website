@@ -193,4 +193,18 @@
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
+
+  /* Custom Pulse Scale Animation */
+  @keyframes pulse-scale {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.03);
+    }
+  }
+
+  .animate-pulse-scale {
+    animation: pulse-scale 5s ease-in-out infinite;
+  }
   

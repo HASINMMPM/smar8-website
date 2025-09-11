@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 
 const ModernFAQ: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState(-1);
+  const { ref: headerRef, isVisible: headerVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: leftRef, isVisible: leftVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: rightRef, isVisible: rightVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
 
   const faqs = [
     {
@@ -34,16 +38,31 @@ const ModernFAQ: React.FC = () => {
   return (
     <section className="bg-white modern-section">
       <div className="modern-container">
-            <h2 className="modern-heading mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="modern-subheading mb-8">
-              Get answers to common questions about Smar8 and how it can help your property management business.
-            </p>
+        <div 
+          ref={headerRef}
+          className={`transition-all duration-1000 ease-out ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <h2 className="modern-heading mb-6">
+            Frequently Asked Questions
+          </h2>
+          <p className="modern-subheading mb-8">
+            Get answers to common questions about Smar8 and how it can help your property management business.
+          </p>
+        </div>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
           {/* FAQ Section */}
-          <div>
-
+          <div 
+            ref={leftRef}
+            className={`transition-all duration-1000 ease-out delay-200 ${
+              leftVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
             <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <div
@@ -79,7 +98,14 @@ const ModernFAQ: React.FC = () => {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div 
+            ref={rightRef}
+            className={`transition-all duration-1000 ease-out delay-400 ${
+              rightVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-8'
+            }`}
+          >
             <div className="relative rounded-2xl shadow-lg border border-gray-100 p-8 bg-blue-500 text-white overflow-hidden">
               {/* decorative corner blobs */}
               <div className="pointer-events-none absolute -top-10 -right-10 w-40 h-40 bg-white/15 rounded-3xl"></div>

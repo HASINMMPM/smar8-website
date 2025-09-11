@@ -8,7 +8,7 @@ interface UseIntersectionObserverOptions {
 
 export const useIntersectionObserver = <T extends HTMLElement = HTMLDivElement>(
   options: UseIntersectionObserverOptions = {}
-): { ref: React.RefObject<T>; isVisible: boolean } => {
+): { ref: React.RefObject<T | null>; isVisible: boolean } => {
   const {
     threshold = 0.1,
     rootMargin = '0px',

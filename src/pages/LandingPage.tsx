@@ -1,23 +1,27 @@
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Features from '../components/Features'
-import Trust from '../components/Trust'
-import Service from '../components/Service'
-import Testimonal from '../components/Testimonal'
-import Cta from '../components/Cta'
+import HeroSection from '../components/landingpage/HeroSection'
+import Achievements from '../components/landingpage/Achievements'
+import Features from '../components/landingpage/Features'
+import IntegrationsAndFeatures from '../components/landingpage/IntegrationsAndFeatures'
+import TestimonialAndSolutions from '../components/commen/TestimonialAndSolutions'
+// import PricingSection from '../components/landingpage/PricingSection'
+import ModernFAQ from '../components/landingpage/ModernFAQ'
+// import BlogSection from '../components/landingpage/BlogSection'
+import ModernCTA from '../components/landingpage/ModernCTA'
 
 const LandingPage = () => {
-    return (
-        <>
-            <Hero />
-            <About />
-            <Features />
-            <Trust />
-            <Service />
-            <Testimonal />
-            <Cta />
-        </>
-    )
+  return (
+   <>
+   <HeroSection />
+   <Achievements />
+   <Features/>
+   <IntegrationsAndFeatures/>
+   <TestimonialAndSolutions/>
+   {/* <PricingSection /> */}
+   <ModernFAQ />
+   {/* <BlogSection /> */}
+   <ModernCTA />
+   </>
+  )
 }
 
 export default LandingPage

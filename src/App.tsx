@@ -1,18 +1,75 @@
 
 import { Route, Routes } from "react-router";
-import ErrorFile from "./pages/ErrorFile";
 import LandingPage from "./pages/LandingPage";
-import TermsOfService from "./pages/TermsOfService";
-import HelpCenter from "./pages/HelpCenter";
-import Careers from "./pages/Careers";
-import AboutUs from "./pages/AboutUs";
-import ContactUs from "./pages/ContactUs";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import MobileApp from "./pages/MobileApp";
-import WebPlatform from "./pages/WebPlatform";
-import Api from "./pages/Api";
-import Pricing from "./pages/Pricing";
 import Layout from "./pages/Layout";
+import ErrorFile from './pages/ErrorFile';
+import AboutUs from './pages/footer/AboutUs';
+import WhyUs from './pages/Why-us';
+import Pricing from './pages/Pricing';
+import Contact from './pages/Contact';
+import TermsOfService from './pages/TermsOfService';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TenentScreen from "./pages/header/TenentScreen";
+import RentelApplication from "./pages/header/RentelApplication";
+import OnlineLease from "./pages/header/OnlineLease";
+import RoomMates from "./pages/header/RoomMates";
+import MaintenanceRequests from "./pages/header/MaintenanceRequests";
+import RentReporting from "./pages/header/RentReporting";
+import MaintenanceBidding from "./pages/header/MaintenanceBidding";
+import ListingWebsite from "./pages/header/ListingWebsite";
+import AutomaticListingSyndication from "./pages/header/AutomaticListingSyndication";
+import OnlinePayment from "./pages/header/OnlinePayment";
+import Accounting from "./pages/header/Accounting";
+import Reconciliation from "./pages/header/Reconciliation";
+import Reports from "./pages/header/Reports";
+import RentabilityReport from "./pages/header/RentabilityReport";
+import PremiumLeads from "./pages/header/PremiumLeads";
+import LeadTracking from "./pages/header/LeadTracking";
+import AutoPay from "./pages/header/AutoPay";
+import ESign from "./pages/header/ESign";
+import GoogleSync from "./pages/header/GoogleSync";
+import Smart8TenantTurner from "./pages/header/Smart8TenantTurner";
+import TeamManagement from "./pages/header/TeamManagement";
+import PropertyMessageBoard from "./pages/header/PropertyMessageBoard";
+import PrioritySupport from "./pages/header/PrioritySupport";
+import PropertyManagers from "./pages/header/PropertyManagers";
+import ServicePros from "./pages/header/ServicePros";
+import Tenants from "./pages/header/Tenants";
+import HelpCenter from "./pages/header/HelpCenter";
+import LandlordResources from "./pages/header/LandlordResources";
+import LandlordForms from "./pages/header/LandlordForms";
+import AffiliateProgram from "./pages/header/AffiliateProgram";
+import ContactUs from "./pages/header/ContactUs";
+import Landlords from "./pages/header/Landlords";
+import Banking from "./pages/footer/Banking";
+import HowItWorks from "./pages/footer/HowItWorks";
+import AccountingAndBookkeeping from "./pages/footer/AccountingAndBookkeeping";
+import Blog from "./pages/footer/Blog";
+import RentCollection from "./pages/footer/RentCollection";
+
+// Newly created footer pages
+import TenantScreening from "./pages/footer/TenantScreening";
+import PartnerWithUs from "./pages/footer/PartnerWithUs";
+import ReferInvestor from "./pages/footer/ReferInvestor";
+import NewsCoverage from "./pages/footer/NewsCoverage";
+import Careers from "./pages/footer/Careers";
+import Services from "./pages/footer/Services";
+import LandlordInsurance from "./pages/footer/LandlordInsurance";
+import RentalPropertyLoans from "./pages/footer/RentalPropertyLoans";
+import RentalCalculator from "./pages/footer/RentalCalculator";
+import Demo from "./pages/footer/Demo";
+import Webinars from "./pages/footer/Webinars";
+import Security from "./pages/footer/Security";
+import Legal from "./pages/footer/Legal";
+
+// Additional footer pages created
+import OurCustomers from "./pages/footer/OurCustomers";
+import SecurityDeposits from "./pages/footer/SecurityDeposits";
+import SavingsAccounts from "./pages/footer/SavingsAccounts";
+import PriceYourRentals from "./pages/footer/PriceYourRentals";
+import InvestingGuides from "./pages/footer/InvestingGuides";
+import RentalForms from "./pages/footer/RentalForms";
+import ProductUpdates from "./pages/footer/ProductUpdates";
 
 const App = () => {
   return (
@@ -22,46 +79,279 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
 
         <Route
-          path="/terms-of-service"
-          element={<TermsOfService />}
-        />
-        <Route
-          path="/helpcenter"
-          element={<HelpCenter />}
-        />
-        <Route
-          path="/career"
-          element={<Careers />}
-        />
-        <Route
           path="/about-us"
           element={<AboutUs />}
         />
         <Route
-          path="/contact-us"
-          element={<ContactUs />}
-        />
-        <Route
-          path="/privacy-policy"
-          element={<PrivacyPolicy />}
-        />
-        <Route
-          path="/mobile-app"
-          element={<MobileApp />}
-        />
-        <Route
-          path="/web-platform"
-          element={<WebPlatform />}
-        />
-        <Route
-          path="/api"
-          element={<Api />}
+          path="/why-smar8"
+          element={<WhyUs />}
         />
         <Route
           path="/pricing"
           element={<Pricing />}
         />
+        <Route
+          path="/contact-us"
+          element={<Contact />}
+        />
+        <Route
+          path="/terms-of-service"
+          element={<TermsOfService />}
+        />
 
+        <Route
+          path="/privacy-policy"
+          element={<PrivacyPolicy />}
+        />
+
+        {/* APPLICANTS & TENANTS Section */}
+        <Route
+          path="/features/tenant-screening"
+          element={<TenentScreen />}
+        />
+        <Route
+          path="/features/rental-application"
+          element={<RentelApplication />}
+        />
+        <Route
+          path="/features/online-leases"
+          element={<OnlineLease />}
+        />
+        <Route
+          path="/features/roommates"
+          element={<RoomMates />}
+        />
+        <Route
+          path="/features/maintenance-requests"
+          element={<MaintenanceRequests />}
+        />
+        <Route
+          path="/features/rent-reporting"
+          element={<RentReporting />}
+        />
+        <Route
+          path="/features/maintenance-bidding"
+          element={<MaintenanceBidding />}
+        />
+        <Route
+          path="/features/listing-website"
+          element={<ListingWebsite />}
+        />
+        <Route
+          path="/features/automatic-listing-syndication"
+          element={<AutomaticListingSyndication />}
+        />
+
+        {/* FINANCES Section */}
+        <Route
+          path="/features/online-payments"
+          element={<OnlinePayment />}
+        />
+        <Route
+          path="/features/accounting"
+          element={<Accounting />}
+        />
+        <Route
+          path="/features/reconciliation"
+          element={<Reconciliation />}
+        />
+        <Route
+          path="/features/reports"
+          element={<Reports />}
+        />
+        <Route
+          path="/features/rentability-report"
+          element={<RentabilityReport />}
+        />
+
+        {/* LEADS Section */}
+        <Route
+          path="/features/premium-leads"
+          element={<PremiumLeads />}
+        />
+        <Route
+          path="/features/lead-tracking"
+          element={<LeadTracking />}
+        />
+        <Route
+          path="/features/auto-pay"
+          element={<AutoPay />}
+        />
+        <Route
+          path="/features/e-sign"
+          element={<ESign />}
+        />
+        <Route
+          path="/features/google-sync"
+          element={<GoogleSync />}
+        />
+        <Route
+          path="/features/smart8-tenant-turner"
+          element={<Smart8TenantTurner />}
+        />
+
+        {/* TEAM Section */}
+        <Route
+          path="/features/team-management"
+          element={<TeamManagement />}
+        />
+        <Route
+          path="/features/property-message-board"
+          element={<PropertyMessageBoard />}
+        />
+        <Route
+          path="/features/priority-support"
+          element={<PrioritySupport />}
+        />
+
+        {/* USE CASES Section */}
+        <Route
+          path="/useCases/property-managers"
+          element={<PropertyManagers />}
+        />
+        <Route
+          path="/useCases/landlords"
+          element={<Landlords />}
+        />
+        <Route
+          path="/useCases/service-pros"
+          element={<ServicePros />}
+        />
+        <Route
+          path="/useCases/tenants"
+          element={<Tenants />}
+        />
+
+        {/* RESOURCES Section */}
+        <Route
+          path="/resources/help-center"
+          element={<HelpCenter />}
+        />
+        <Route
+          path="/resources/landlord-resources"
+          element={<LandlordResources />}
+        />
+        <Route
+          path="/resources/landlord-forms"
+          element={<LandlordForms />}
+        />
+        <Route
+          path="/resources/affiliate-program"
+          element={<AffiliateProgram />}
+        />
+        <Route
+          path="/resources/contact-us"
+          element={<ContactUs />}
+        />
+        <Route
+          path="/banking"
+          element={<Banking />}
+        />
+
+        <Route
+          path="/how-it-works"
+          element={<HowItWorks />}
+        />
+        <Route
+          path="/accounting-bookkeeping"
+          element={<AccountingAndBookkeeping />}
+        />
+        <Route
+          path="/help-center"
+          element={<HelpCenter />}
+        />
+        <Route
+          path="/blog"
+          element={<Blog />}
+        />
+        <Route
+          path="/rent-collection"
+          element={<RentCollection />}
+        />
+
+        {/* Newly added footer page routes */}
+        <Route
+          path="/partner-with-us"
+          element={<PartnerWithUs />}
+        />
+        <Route
+          path="/refer-a-real-estate-investor"
+          element={<ReferInvestor />}
+        />
+        <Route
+          path="/news-coverage"
+          element={<NewsCoverage />}
+        />
+        <Route
+          path="/careers"
+          element={<Careers />}
+        />
+        <Route
+          path="/services"
+          element={<Services />}
+        />
+        <Route
+          path="/landlord-insurance"
+          element={<LandlordInsurance />}
+        />
+        <Route
+          path="/rental-property-loans"
+          element={<RentalPropertyLoans />}
+        />
+        <Route
+          path="/rental-calculator"
+          element={<RentalCalculator />}
+        />
+        <Route
+          path="/demo"
+          element={<Demo />}
+        />
+        <Route
+          path="/webinars"
+          element={<Webinars />}
+        />
+        <Route
+          path="/security"
+          element={<Security />}
+        />
+        <Route
+          path="/legal"
+          element={<Legal />}
+        />
+        <Route
+          path="/tenant-screening"
+          element={<TenantScreening />}
+        />
+
+        {/* Additional footer page routes */}
+        <Route
+          path="/our-customers"
+          element={<OurCustomers />}
+        />
+        <Route
+          path="/security-deposits"
+          element={<SecurityDeposits />}
+        />
+        <Route
+          path="/savings-accounts"
+          element={<SavingsAccounts />}
+        />
+        <Route
+          path="/price-your-rentals"
+          element={<PriceYourRentals />}
+        />
+        <Route
+          path="/investing-guides"
+          element={<InvestingGuides />}
+        />
+        <Route
+          path="/rental-forms"
+          element={<RentalForms />}
+        />
+        <Route
+          path="/product-updates"
+          element={<ProductUpdates />}
+        />
 
       </Route>
     </Routes>

@@ -1,0 +1,21 @@
+{
+  "name": "Smar8 - Smart Solutions for Your Business",
+  "short_name": "Smar8",
+  "description": "Smar8 provides innovative web platforms, mobile apps, and API solutions to help businesses grow and succeed in the digital age.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/src/assets/logo.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "/src/assets/logo.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

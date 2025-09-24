@@ -1,6 +1,7 @@
+import React from "react";
 import { Outlet } from "react-router-dom";  // adjust path if needed
-import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Footer from "../components/commen/Footer";
+import Header from "../components/commen/Header";
 
 const Layout: React.FC = () => {
     return (

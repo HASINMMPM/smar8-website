@@ -1,0 +1,166 @@
+import React from 'react';
+import dualMobile from '../../assets/dual-mobile.webp';
+import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
+
+// Feature data array for reusability
+const featuresData = [
+  {
+    id: 1,
+    number: "01",
+    title: "Property Management",
+    subtitle: "Complete property oversight",
+    description: "Streamline your property operations with our comprehensive management tools. Track maintenance, handle tenant requests, and manage property portfolios efficiently."
+  },
+  {
+    id: 2,
+    number: "02", 
+    title: "Tenant Screening",
+    subtitle: "Thorough background verification",
+    description: "Comprehensive tenant screening with background checks, credit reports, and rental history verification. Make informed decisions with confidence."
+  },
+  {
+    id: 3,
+    number: "03",
+    title: "Financial Analytics",
+    subtitle: "Data-driven insights",
+    description: "Advanced reporting and analytics to track income, expenses, and property performance. Get insights to optimize your rental business."
+  },
+  {
+    id: 4,
+    number: "04",
+    title: "Secure Payments",
+    subtitle: "Safe & automated collection",
+    description: "Secure online rent collection with automated reminders and late fee management. Multiple payment options for tenant convenience."
+  }
+];
+
+
+const Features: React.FC = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: leftRef, isVisible: leftVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: centerRef, isVisible: centerVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+  const { ref: rightRef, isVisible: rightVisible } = useIntersectionObserver<HTMLDivElement>({ threshold: 0.2 });
+
+  return (
+    <section className="bg-gradient-to-r from-purple-50 via-blue-50 to-green-50 modern-section relative overflow-hidden">
+      {/* Dotted background pattern */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle, #cbd5e1 1px, transparent 1px)`,
+          backgroundSize: '20px 20px'
+        }}></div>
+      </div>
+      
+      <div className="modern-container relative z-10">
+        {/* Section Header */}
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 transition-all duration-1000 ease-out ${
+            headerVisible 
+              ? 'opacity-100 translate-y-0' 
+              : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <p className="text-primary-500 text-sm font-medium mb-4">
+            Most Popular Application Features
+          </p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            Popular Features That Blows Your Mind
+          </h2>
+        </div>
+
+        {/* Three Column Layout */}
+        <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
+          
+          {/* Left Column - Features 1 & 3 */}
+          <div 
+            ref={leftRef}
+            className={`space-y-8 transition-all duration-1000 ease-out delay-200 ${
+              leftVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 -translate-x-8'
+            }`}
+          >
+            {featuresData.filter((_, index) => index % 2 === 0).map((feature) => (
+              <div key={feature.id} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-100 border border-primary-200 flex items-center justify-center">
+                    <span className="text-primary-600 font-bold text-lg">{feature.number}</span>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-primary-500 text-sm font-medium mb-3">
+                      {feature.subtitle}
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Center Column - Dual Mobile Mockup */}
+          <div 
+            ref={centerRef}
+            className={`flex justify-center items-end transition-all duration-1000 ease-out delay-400 ${
+              centerVisible 
+                ? 'opacity-100 scale-100' 
+                : 'opacity-0 scale-95'
+            }`}
+          >
+            <div className="relative max-w-sm">
+              <img
+                src={dualMobile}
+                alt="Dual Mobile App Mockup"
+                className={`w-full h-auto object-contain transition-all duration-1000 ease-out ${
+                  centerVisible 
+                    ? 'animate-pulse-scale' 
+                    : ''
+                }`}
+              />
+            </div>
+          </div>
+
+          {/* Right Column - Features 2 & 4 */}
+          <div 
+            ref={rightRef}
+            className={`space-y-8 transition-all duration-1000 ease-out delay-600 ${
+              rightVisible 
+                ? 'opacity-100 translate-x-0' 
+                : 'opacity-0 translate-x-8'
+            }`}
+          >
+            {featuresData.filter((_, index) => index % 2 === 1).map((feature) => (
+              <div key={feature.id} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-primary-100 border border-primary-200 flex items-center justify-center">
+                    <span className="text-primary-600 font-bold text-lg">{feature.number}</span>
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-primary-500 text-sm font-medium mb-3">
+                      {feature.subtitle}
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Features;
